@@ -45,8 +45,8 @@ export default function Hero(){
             </div>  
             </div>
             <div className="grid-cols-12 grid pt-[178px] mb-20">
-                <div className="col-span-4 flex flex-col h-[900px] items-start justify-between">
-                  <div className="flex items-start justify-between w-full">
+                <div className="col-span-3 flex flex-col h-[600px] items-start justify-between">
+                  <div className="flex items-start gap-7 w-full">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
@@ -62,14 +62,9 @@ export default function Hero(){
                             <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
                             <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
                         </div>
-                    </div>
-                    <div className="p-3 flex items-center justify-center border border-sky-200 rounded-2xl">
-                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
-                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
-                        </div>
-                    </div>
+                    </div>     
                   </div>
-                 <div className="flex items-start justify-between w-full">
+                 <div className="flex items-start gap-7 w-full">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
@@ -86,13 +81,40 @@ export default function Hero(){
                             <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
                         </div>
                     </div>
-                    <div className="p-3 flex items-center justify-center border border-sky-200 rounded-2xl">
+                 </div>
+                </div>
+                <div className="col-span-5 flex items-start gap-4">
+                    <div className="flex flex-col h-full justify-between pl-[58px]">
+                    <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
                         <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
-                            <Image src="/wallet.svg" alt={"walletSvg Logo"} width={28} height={28} />
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
                         </div>
                     </div>
-                 </div>
-                
+                    <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                        </div>
+                    </div>
+                    </div>
+                    <div className="iphoneContainer relative bg-[#666] w-[340px] h-[600px] rounded-[50px]">
+                       <div></div>
+                       <i className="btn btn1"></i>
+                       <i className="btn btn2"></i>
+                       <i className="btn btn3"></i>
+                       <i className="rightBtn"></i>
+                    </div>
+                    <div className="flex flex-col h-full justify-between pl-[0px]">
+                      <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                        </div>
+                       </div>
+                       <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                        </div>
+                      </div>
+                    </div>
                 </div>
                 
 
