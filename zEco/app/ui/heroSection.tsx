@@ -7,13 +7,14 @@ export default function Hero(){
     const pathData = 'M 4.561 219.034 L 42.594833333333334 214.6475 C 80.62866666666667 210.261 156.69633333333334 201.48799999999997 238.60733333333334 200.88816666666665 C 320.5183333333334 200.28833333333333 408.2726666666667 207.86166666666668 452.14983333333333 211.6483333333333 L 496.027 215.435';
     const className = 'fill-current stroke-black stroke-2';
     return(
-        <div className="w-full relative mt-20">
-            <div className="absolute w-[0.8px] left-[330px] bottom-[200px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
-            <div className="absolute w-[0.8px] right-[330px] bottom-[200px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
-            <div className="absolute h-[0.8px] left-[230px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
+        <div className="my-auto max-w-[1443px] mx-auto flex flex-col ">
+            <div className="relative mt-20">
+               <div className="absolute w-[0.8px] left-[156px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
+            <div className="absolute w-[0.8px] right-[156px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
+            <div className="absolute h-[0.8px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
             <div className="absolute right-[-0.6px] bottom-[-1.4px] rounded-full w-[4.3px] h-[4.6px] bg-slate-700"></div>
             </div>
-            <div className="absolute h-[0.8px] right-[230px] bottom-[120px] w-[200px] bg-gradient-to-l from-transparent to-slate-700">
+            <div className="absolute h-[0.8px] right-[100px] bottom-[120px] w-[200px] bg-gradient-to-l from-transparent to-slate-700">
             <div className="absolute left-[-0.6px] bottom-[-1.4px] rounded-full w-[4.3px] h-[4.6px] bg-slate-700"></div>
             </div>
             <div className="flex flex-col gap- items-center justify-center relative">
@@ -42,6 +43,60 @@ export default function Hero(){
                 </defs>
                 </svg>
             </div>  
+            </div>
+            <div className="grid-cols-12 grid pt-[178px] mb-20">
+                <div className="col-span-4 flex flex-col h-[900px] items-start justify-between">
+                  <div className="flex items-start justify-between w-full">
+                    <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
+                        <div className="flex flex-col items-start gap-5 ">
+                            <div className="flex flex-col gap-5">
+                                <div className="p-2 items-center justify-center flex border border-sky-100 max-w-[50px] rounded-xl">
+                                    <Image src="/graph.svg" alt={""} width={28} height={28}/>
+                                </div>
+                                <div className=" font-semibold text-2xl leading-[28px] ">Rule-based budget and spending management</div>
+                            </div>
+                            <div className="h-[1.5px] bg-gradient-to-l from-transparent to-slate-500 w-full"></div>
+                            <div className=" font-light text-gray-300 ">You can use ZERO to help control your spending and build a realistic budget to stay on track!</div>
+                        </div>
+                        <div className="flex flex-col h-[237px] w-[40px] justify-between items-end">
+                            <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
+                            <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div className="p-3 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                        </div>
+                    </div>
+                  </div>
+                 <div className="flex items-start justify-between w-full">
+                    <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
+                        <div className="flex flex-col items-start gap-5 ">
+                            <div className="flex flex-col gap-5">
+                                <div className="p-2 items-center justify-center flex border border-sky-100 max-w-[50px] rounded-xl">
+                                    <Image src="/wallet.svg" alt={""} width={28} height={28}/>
+                                </div>
+                                <div className=" font-semibold text-2xl leading-[28px] ">Rule-based budget and spending management</div>
+                            </div>
+                            <div className="h-[1.5px] bg-gradient-to-l from-transparent to-slate-500 w-full"></div>
+                            <div className=" font-light text-gray-300 ">You can use ZERO to help control your spending and build a realistic budget to stay on track!</div>
+                        </div>
+                        <div className="flex flex-col h-[237px] w-[40px] justify-between items-end">
+                            <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
+                            <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div className="p-3 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/wallet.svg" alt={"walletSvg Logo"} width={28} height={28} />
+                        </div>
+                    </div>
+                 </div>
+                
+                </div>
+                
+
+            </div>
         </div>
     )
 }
