@@ -44,8 +44,81 @@ export default function Hero(){
                 </svg>
             </div>  
             </div>
-            <div className="grid-cols-12 grid pt-[178px] mb-20">
-                <div className="col-span-3 flex flex-col h-[600px] items-start justify-between">
+            <div className="grid-cols-10  grid items-center  pt-[178px] mb-20 ">
+                <div className="col-span-3 flex flex-col h-[680px] items-start justify-between  ">
+                  <div className="flex items-start max-w-[350px]">
+                    <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
+                        <div className="flex flex-col items-start gap-5 ">
+                            <div className="flex flex-col gap-5">
+                                <div className="p-2 items-center justify-center flex border border-sky-100 max-w-[50px] rounded-xl">
+                                    <Image src="/graph.svg" alt={""} width={28} height={28}/>
+                                </div>
+                                <div className=" font-semibold text-2xl leading-[28px] ">Rule-based budget and spending management</div>
+                            </div>
+                            <div className="h-[1.5px] bg-gradient-to-l from-transparent to-slate-500 w-full"></div>
+                            <div className=" font-light text-gray-300 ">You can use ZERO to help control your spending and build a realistic budget to stay on track!</div>
+                        </div>
+                        <div className="flex flex-col h-[237px] w-[40px] justify-between items-end">
+                            <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
+                            <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
+                        </div>
+                    </div>     
+                  </div>
+                 <div className="flex items-start">
+                    <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
+                        <div className="flex flex-col items-start gap-5 ">
+                            <div className="flex flex-col gap-5">
+                                <div className="p-2 items-center justify-center flex border border-sky-100 max-w-[50px] rounded-xl">
+                                    <Image src="/wallet.svg" alt={""} width={28} height={28}/>
+                                </div>
+                                <div className=" font-semibold text-2xl leading-[28px] ">Rule-based budget and spending management</div>
+                            </div>
+                            <div className="h-[1.5px] bg-gradient-to-l from-transparent to-slate-500 w-full"></div>
+                            <div className=" font-light text-gray-300 ">You can use ZERO to help control your spending and build a realistic budget to stay on track!</div>
+                        </div>
+                        <div className="flex flex-col h-[237px] w-[40px] justify-between items-end">
+                            <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
+                            <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                <div className="col-span-4 flex h-[600px] items-start gap-20">
+                    <div className="flex flex-col h-full justify-between ">
+                    <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                        </div>
+                    </div>
+                    <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                        </div>
+                    </div>
+                    </div>
+                    <div className="iphoneContainer relative bg-[#666] w-[340px] h-[600px] rounded-[50px]">
+                       <div className="inner">
+                          <div className="popup absolute top-5 w-[90px] h-[25px] rounded-[20px] bg-slate-100"></div>
+                       </div>
+                       <i className="btn btn1"></i>
+                       <i className="btn btn2"></i>
+                       <i className="btn btn3"></i>
+                       <i className="rightBtn"></i>
+                    </div>
+                    <div className="flex flex-col h-full justify-between ">
+                      <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                        </div>
+                       </div>
+                       <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
+                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div className="col-span-3 flex flex-col h-[680px] pl-[82px] items-start justify-between">
                   <div className="flex items-start gap-7 w-full">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
@@ -83,42 +156,8 @@ export default function Hero(){
                     </div>
                  </div>
                 </div>
-                <div className="col-span-5 flex items-start gap-4">
-                    <div className="flex flex-col h-full justify-between pl-[58px]">
-                    <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
-                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
-                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
-                        </div>
-                    </div>
-                    <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
-                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
-                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
-                        </div>
-                    </div>
-                    </div>
-                    <div className="iphoneContainer relative bg-[#666] w-[340px] h-[600px] rounded-[50px]">
-                       <div></div>
-                       <i className="btn btn1"></i>
-                       <i className="btn btn2"></i>
-                       <i className="btn btn3"></i>
-                       <i className="rightBtn"></i>
-                    </div>
-                    <div className="flex flex-col h-full justify-between pl-[0px]">
-                      <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
-                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
-                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
-                        </div>
-                       </div>
-                       <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
-                        <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
-                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                
-
             </div>
+            
         </div>
     )
 }

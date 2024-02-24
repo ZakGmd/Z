@@ -38,7 +38,18 @@ body {
   inset: 3px;
   background: black;
   border-radius: 48px;
-  border: 10px solid black;
+  
+  overflow: hidden;
+  
+}
+.inner{
+  position: relative ;
+  border-radius: 48px;
+  height: 100% ;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 }
 .btn{
   position: absolute;
