@@ -157,16 +157,24 @@ export default function Hero(){
                  </div>
                 </div>
             </div>
-            <div className=" mt-5 mb-10 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-lg border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden ">
+            <div className=" mt-5 mb-10 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden ">
               <div className="p-20 flex-1 flex flex-col max-w-[880px] gap-6 items-start ">
                 <div className="text-start flex flex-col gap-3 ">
                     <div className="bg-clip-text py-2 text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 font-bold text-6xl">6 Months free of Zero Premium</div>
                     <div className=" font-medium text-gray-300 ">Try Zero Premium free for 6 months , no credit card required.</div>
                 </div>
-                <div className=" font-normal text-gray-400 text-xl "><span className="font-bold text-slate-100 text-4xl pr-3">Free</span>$9,99<span className=" text-sm "> / per month</span></div>
-                
+                <div className="flex flex-col gap-5 items-start">
+                    <div className="flex flex-col gap-3 ">
+                    <div className=" font-normal text-gray-400 text-xl "><span className="font-bold text-slate-100 text-4xl pr-3">Free</span>$9,99<span className=" text-sm "> / per month</span></div>
+                    <div className="flex max-w-[239.69px] items-center">
+                        <div className=" w-1/2 h-[1px] bg-gradient-to-r from-black from-12% to-slate-600 "></div>
+                        <div className=" w-1/2 h-[1px] bg-gradient-to-l from-black from-12% to-slate-600 "></div>
+                    </div>
+                    </div>
+                    <Link href={"/"} className="px-20 py-4 bg-blue-600 text-slate-50 font-normal text-base text-center rounded-2xl">Get 6 months for free</Link>
+                </div>  
               </div>
-              <div className="max-w-[563px] w-full h-[590px] flex flex-col gap-8 bg-bottom bg-cover pl-[72px] py-[120px] " style={{ backgroundImage: 'url(bg.svg)' }}>
+              <div className="max-w-[563px] w-full h-[400px] flex flex-col gap-8 bg-bottom bg-cover pl-[72px] py-[120px] " style={{ backgroundImage: 'url(bg.svg)' }}>
                 <div className="flex items-center gap-2">
                     <Image src="check.svg" alt={"checkSvg"} width={24} height={24} />
                     <div className="font-semibold text-lg tracking-tight ">Manual budget input</div>
