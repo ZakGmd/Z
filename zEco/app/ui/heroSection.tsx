@@ -7,7 +7,8 @@ export default function Hero(){
     const pathData = 'M 4.561 219.034 L 42.594833333333334 214.6475 C 80.62866666666667 210.261 156.69633333333334 201.48799999999997 238.60733333333334 200.88816666666665 C 320.5183333333334 200.28833333333333 408.2726666666667 207.86166666666668 452.14983333333333 211.6483333333333 L 496.027 215.435';
     const className = 'fill-current stroke-black stroke-2';
     return(
-        <div className="my-auto max-w-[1443px] mx-auto flex flex-col ">
+        <>
+        <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 ">
             <div className="relative mt-20">
                <div className="absolute w-[0.8px] left-[156px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="absolute w-[0.8px] right-[156px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
@@ -157,7 +158,7 @@ export default function Hero(){
                  </div>
                 </div>
             </div>
-            <div className=" mt-5 mb-10 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden ">
+            <div className=" mt-5 mb-20 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden ">
               <div className="p-20 flex-1 flex flex-col max-w-[880px] gap-6 items-start ">
                 <div className="text-start flex flex-col gap-3 ">
                     <div className="bg-clip-text py-2 text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 font-bold text-6xl">6 Months free of Zero Premium</div>
@@ -197,13 +198,33 @@ export default function Hero(){
                 </div>
               </div>
             </div>
-            <div className="h-[800px]  rounded-2xl flex py-36  flex-col gap-8 bg-center bg-cover items-center  border-l-2  border-r-2 border-t-[1.5px] border-t-cyan-700 border-r-cyan-700/25 border-l-cyan-700/25 " style={{ backgroundImage: 'url(bg.svg)' }}>
+            <div className="h-[800px] rounded-2xl flex py-36  flex-col gap-8 bg-center bg-cover items-center  border-l-2  border-r-2 border-t-[1.5px] border-t-cyan-700 border-r-cyan-700/25 border-l-cyan-700/25  " style={{ backgroundImage: 'url(bg.svg)' }}>
                 <div className="flex flex-col gap-4 ">
                     <div className="text-6xl tracking-tight font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 ">Sign up and get<br></br>6 months Premium</div>
                     <div className=" text-center font-medium text-gray-400  ">Ready to get started?</div>
                 </div>
-                <form action="" className="flex flex-col gap-6 "></form>
+                <form action="" className="flex flex-col gap-6 items-start max-w-[601.2px] w-full">
+                    <div className="flex gap-4 items-center w-full ">
+                        <input type="text" placeholder="First Name" className=" w-1/2 outline-none py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
+                        <input type="text" placeholder="Last Name" className=" w-1/2 outline-none py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] " />
+                    </div>
+                    <input type="text" placeholder="Date of Birth " className=" w-full outline-none  py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your phone number" className=" w-full outline-none  py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
+                    <input type="email" id="email" placeholder="E-Mail" pattern=".+@example\.com" className=" w-full outline-none  py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Account number" className=" w-full outline-none  py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
+                    <input type="text" placeholder="Account balance" className=" w-full outline-none  py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
+                    <div className="flex items-start justify-between w-full">
+                        <div className="flex items-center gap-2 ">
+                            
+                        </div>
+                        <button type="submit" ></button>
+                    </div>
+                </form>
             </div>
         </div>
+        <div className="w-full bg-slate-100 h-56"></div>
+        
+        </>
+        
     )
 }
