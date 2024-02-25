@@ -197,6 +197,13 @@ export default function Hero(){
                 </div>
               </div>
             </div>
+            <div className="h-[800px]  rounded-2xl flex py-36  flex-col gap-8 bg-center bg-cover items-center  border-l-2  border-r-2 border-t-[1.5px] border-t-cyan-700 border-r-cyan-700/25 border-l-cyan-700/25 " style={{ backgroundImage: 'url(bg.svg)' }}>
+                <div className="flex flex-col gap-4 ">
+                    <div className="text-6xl tracking-tight font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 ">Sign up and get<br></br>6 months Premium</div>
+                    <div className=" text-center font-medium text-gray-400  ">Ready to get started?</div>
+                </div>
+                <form action="" className="flex flex-col gap-6 "></form>
+            </div>
         </div>
     )
 }
