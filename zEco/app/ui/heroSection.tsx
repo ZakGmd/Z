@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import Image from "next/image";
-
+import SelectUi from "./selectUi";
 
 export default function Hero(){
     const idk = `bg-clip-text py-2 text-transparent bg-gradient-to-r from-slate-50 to-slate-600 font-bold ` ;
@@ -198,7 +199,7 @@ export default function Hero(){
                 </div>
               </div>
             </div>
-            <div className="h-[800px] rounded-2xl flex py-36  flex-col gap-8 bg-center bg-cover items-center  border-l-2  border-r-2 border-t-[1.5px] border-t-cyan-700 border-r-cyan-700/25 border-l-cyan-700/25  " style={{ backgroundImage: 'url(bg.svg)' }}>
+            <div className="h-[800px] rounded-2xl flex py-20  flex-col gap-8 bg-center bg-cover items-center  border-l-2  border-r-2 border-t-[1.5px] border-t-cyan-700 border-r-cyan-700/25 border-l-cyan-700/25  " style={{ backgroundImage: 'url(bg.svg)' }}>
                 <div className="flex flex-col gap-4 ">
                     <div className="text-6xl tracking-tight font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 ">Sign up and get<br></br>6 months Premium</div>
                     <div className=" text-center font-medium text-gray-400  ">Ready to get started?</div>
@@ -213,11 +214,12 @@ export default function Hero(){
                     <input type="email" id="email" placeholder="E-Mail" pattern=".+@example\.com" className=" w-full outline-none  py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
                     <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Account number" className=" w-full outline-none  py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
                     <input type="text" placeholder="Account balance" className=" w-full outline-none  py-[10px] px-4 items-start relative rounded-xl bg-transparent border border-slate-400 backdrop-filter backdrop-blur-[1.3px] "  />
-                    <div className="flex items-start justify-between w-full">
-                        <div className="flex items-center gap-2 ">
-                            
+                    <div className="flex items-center justify-between w-full ">
+                        <div className="flex items-center gap-1 ">
+                            <SelectUi/>
+                            <div className="max-w-[250px] text-xs text-gray-400 ">By continuing you agree to Freede<br></br> Zero's <span className=" underline text-cyan-400 ">Terms of Service</span> & <span className=" underline text-cyan-400 ">Privacy Policy</span></div>
                         </div>
-                        <button type="submit" ></button>
+                        <button type="submit" className="px-4 py-3 rounded-xl text-center bg-blue-600 ">Get started for Free</button>
                     </div>
                 </form>
             </div>
