@@ -98,10 +98,14 @@ export default function Hero(){
                         </div>
                     </div>
                     </div>
-                    <div className="iphoneContainer relative bg-[#666] w-[340px] h-[600px] rounded-[50px]">
+                    <div className="iphoneContainer relative bg-[#666] p-[7px] w-[340px] h-[600px] rounded-[50px]">
                        <div className="inner">
-                          <div className="popup absolute top-5 w-[90px] h-[25px] rounded-[20px] bg-slate-100"></div>
+                          <div className="popup absolute top-5 w-[90px] h-[25px] rounded-[20px] bg-slate-900 z-10"></div>
+                          <div className="absolute animate-pulse top-[-1.5px] ">
+                        <Image src="foIphn1.svg" alt={""} width={340} height={600} className="pr-[-4px]" />
                        </div>
+                       </div>
+                       
                        <i className="btn btn1"></i>
                        <i className="btn btn2"></i>
                        <i className="btn btn3"></i>
