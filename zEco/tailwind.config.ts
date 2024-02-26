@@ -15,6 +15,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        'infinite-y-move': 'infinite-y-move 10s ease infinite',
+      },
+      keyframes: {
+        'infinite-y-move': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(-100%)' },
+        },
+      },
     },
   },
   darkMode: 'class' ,

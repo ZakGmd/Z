@@ -224,7 +224,31 @@ export default function Hero(){
                 </form>
             </div>
         </div>
-        <div className="w-full bg-slate-100 h-56"></div>
+        <div className="w-full bg-slate-100 h-full py-28 items-center">
+            <div className="flex flex-col gap-3">
+              <div className="text-center text-8xl font-semibold tracking-tight text-gray-900">Start your journey<br></br>with ZERO app</div>
+              <div className="text-center text-gray-900 bg-transparent font-medium">Download the mobile app and start managing your finances today.</div>
+              <div className="items-center flex justify-center pt-3 mb-5 ">
+              <Link href={'/'} className="flex gap-3 items-center px-6 py-2 justify-center border border-gray-300 rounded-full bg-gradient-to-r from-slate-100 to-slate-300">
+                <Image src={"appleDark.svg"} alt={"appleDarkLogo"} height={24} width={24}/>
+                <div className="flex flex-col items-start">
+                    <div className=" text-xs text-gray-950 tracking-tighter font-medium ">Download on the</div>
+                    <div className="text-gray-950 font-bold text-lg">App Store</div>
+                </div>
+              </Link>
+              </div>
+              
+            </div>
+            <div className="w-full h-96 flex items-center overflow-hidden my-6 justify-center">
+                <div className="relative  max-w-[1043px]  overflow-y-hidden w-full h-[400px] rounded-3xl bg-slate-200/65">
+                    <div className="absolute flex flex-col items-start ml-10 gap-4 animate-infinite-y-move z-[-10px]">
+                        <Image src="forCard1.svg" className="ml-[60px]" alt={"perspectiveCard"} height={516.4} width={239.26}/>
+                        <Image src="forCard1.svg" className="ml-[-60px]" alt={"perspectiveCard"} height={516.4} width={239.26}/>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
         
         </>
         
