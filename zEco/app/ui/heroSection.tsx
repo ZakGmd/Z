@@ -1,16 +1,23 @@
+"use client"
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import Image from "next/image";
 import SelectUi from "./selectUi";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Hero(){
+    const first = useRef() ;
+    useGSAP(()=>{
+        gsap.to(first.current, { rotation: 180 });
+    }) ;
     const idk = `bg-clip-text py-2 text-transparent bg-gradient-to-r from-slate-50 to-slate-600 font-bold ` ;
-    const pathData = 'M 4.561 219.034 L 42.594833333333334 214.6475 C 80.62866666666667 210.261 156.69633333333334 201.48799999999997 238.60733333333334 200.88816666666665 C 320.5183333333334 200.28833333333333 408.2726666666667 207.86166666666668 452.14983333333333 211.6483333333333 L 496.027 215.435';
-    const className = 'fill-current stroke-black stroke-2';
+
     return(
         <>
-        <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 ">
-            <div className="relative mt-20">
+        <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 " >
+            <div className="relative mt-20" >
                <div className="absolute w-[0.8px] left-[156px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="absolute w-[0.8px] right-[156px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="absolute h-[0.8px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
@@ -21,7 +28,7 @@ export default function Hero(){
             </div>
             <div className="flex flex-col gap- items-center justify-center relative">
                 <div className="flex flex-col gap-2 items-center text-7xl">
-                    <span className={`${idk}`}>Easy Budgeting,</span>
+                    <span ref={first} className={` ${idk}`}>Easy Budgeting,</span>
                     <span className={`${idk}`}>Zero Stress</span>
                 </div>
                 <div className=" font-normal text-slate-400">Smart financial assistant that takes care of your personal finances.</div>
