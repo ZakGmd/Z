@@ -6,15 +6,33 @@ import SelectUi from "./selectUi";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother} from "gsap-trial/ScrollSmoother";
 
 export default function Hero(){
-    
     const idk = `  bg-clip-text py-2 text-transparent bg-gradient-to-r from-slate-50 to-slate-600 font-bold text-7xl  ` ;
+    const container = useRef(null) ;
+    useGSAP(()=>{
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(container.current, {
+             scrollTrigger: {
+                trigger: container.current ,
+                start: "-184px" ,  
+                scrub: true ,
+                markers: true 
+            },
+            top:"-1000px",
+            opacity: 0 ,
+
+         }
+        )
+       
+    },{scope: container});
 
     return(
         <>
-        <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 " >
-            <div className="relative mt-20" >
+        <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20  "  >
+            <div className="relative mt-20"  >
                <div className="absolute w-[0.8px] left-[156px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="absolute w-[0.8px] right-[156px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="absolute h-[0.8px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
@@ -25,7 +43,7 @@ export default function Hero(){
             </div>
             <div className="flex flex-col gap- items-center justify-center relative">
                 <div className="flex flex-col gap-2 items-center ">
-                    <span className="idk font-bold text-7xl py-2">Easy Budgeting,</span>
+                    <span className="idk font-bold text-7xl py-2" data-speed="0.01"ref={container} >Easy Budgeting,</span>
                     <span className={`${idk}`}>Zero Stress</span>
                 </div>
                 <div className=" font-normal text-slate-400">Smart financial assistant that takes care of your personal finances.</div>
