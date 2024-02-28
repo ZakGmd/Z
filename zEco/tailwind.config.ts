@@ -16,12 +16,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        'infinite-y-move': 'infinite-y-move 10s ease infinite',
+        'gradient': 'gradient 8s linear infinite',
       },
       keyframes: {
-        'infinite-y-move': {
-          from: { transform: 'translateY(0)' },
-          to: { transform: 'translateY(-100%)' },
+        'gradient': {
+          to: { 'background-position': '20% center' },
         },
       },
     },

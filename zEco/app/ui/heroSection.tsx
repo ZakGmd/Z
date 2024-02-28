@@ -8,11 +8,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 export default function Hero(){
-    const first = useRef() ;
-    useGSAP(()=>{
-        gsap.to(first.current, { rotation: 180 });
-    }) ;
-    const idk = `bg-clip-text py-2 text-transparent bg-gradient-to-r from-slate-50 to-slate-600 font-bold ` ;
+    
+    const idk = `  bg-clip-text py-2 text-transparent bg-gradient-to-r from-slate-50 to-slate-600 font-bold text-7xl  ` ;
 
     return(
         <>
@@ -27,8 +24,8 @@ export default function Hero(){
             <div className="absolute left-[-0.6px] bottom-[-1.4px] rounded-full w-[4.3px] h-[4.6px] bg-slate-700"></div>
             </div>
             <div className="flex flex-col gap- items-center justify-center relative">
-                <div className="flex flex-col gap-2 items-center text-7xl">
-                    <span ref={first} className={` ${idk}`}>Easy Budgeting,</span>
+                <div className="flex flex-col gap-2 items-center ">
+                    <span className="idk font-bold text-7xl py-2">Easy Budgeting,</span>
                     <span className={`${idk}`}>Zero Stress</span>
                 </div>
                 <div className=" font-normal text-slate-400">Smart financial assistant that takes care of your personal finances.</div>

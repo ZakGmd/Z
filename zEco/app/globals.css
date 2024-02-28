@@ -80,5 +80,33 @@ body {
   border-bottom-right-radius: 4px;
   background: radial-gradient(#ccc,#666,#222);
   z-index: 10;
-
 }
+.idk{
+  
+  background: linear-gradient(to right,#f8fafc,#475569);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all;
+  
+  animation: text-bg-animation 2s cubic-bezier(0.76,-0.58, 0.29, 0.6) 1 ;
+}
+
+
+@keyframes text-bg-animation {
+  0%{
+    background-size: 0%;
+    opacity: 0;
+  }
+  10%,20%,30%,40%,45%{
+    background-size: -80%;
+    opacity: 0;
+  }
+ 
+  100%{
+    opacity: 1;
+    background-size: 98%;
+  }
+  
+}
+
