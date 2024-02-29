@@ -25,8 +25,7 @@ export default function Hero(){
             opacity: 0 ,
 
          }
-        )
-       
+        ) 
     },{scope: container});
 
     return(
