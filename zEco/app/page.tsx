@@ -4,7 +4,7 @@ import Nav from "./ui/navBar";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className=" ">
         <Nav/>
         <Hero/> 
     </main>

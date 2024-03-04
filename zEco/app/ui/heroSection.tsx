@@ -8,37 +8,45 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother} from "gsap-trial/ScrollSmoother";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero(){
     const idk = `  bg-clip-text py-2 text-transparent bg-gradient-to-r from-slate-50 to-slate-600 font-bold text-7xl  ` ;
     const container = useRef(null) ;
-    console.log(container) ;
     useGSAP(()=>{
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from(".idkk",{
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.idkk' ,
+                scrub: 0.4 ,
+                pin: container.current ,
+                start: "top 18%" ,
+            }
+        }) ;
+        ScrollTrigger.create({
+            trigger: '.idkk' ,
+            start: 'top top' ,
+            endTrigger: ".sfag" ,
+            end: "bottom bottom" ,
+            markers: true ,
+        }) ;
+       tl.to('.idkk',{
             y: -600 ,
-            duration: 0.8 ,
-        }) ;
-        gsap.from(".sfg",{
-            x: -600 ,
-            duration: 0.8 ,
-        }) ;
-        gsap.from(".svg",{
-            x: 600 ,
-            duration: 0.8 ,
-        }) ;
-        gsap.from(".ige",{
-            backgroundColor: "red", // background-color
-  boxShadow: "0px 0px 20px 20px red", // animate complex strings
-  borderRadius: "50% 50%",
-  height: "auto",
-        })
+        }).to(".svg ",{
+            x : 900 ,
+        }).to(".sfg",{
+            x: -900 ,
+        }).fromTo(".idk",{opacity: 1},{
+            y : -300 ,
+            autoAlpha: 0 ,
+         })
+
+
     },{scope: container});
 
     return(
         <>
-        <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 overflow overflow-hidden "  >
-            <div className="relative mt-20" ref={container}  >
+        <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 overflow overflow-hidden " ref={container}   >
+            <div className="relative mt-[150px]" >
                <div className="idkk absolute w-[0.8px] left-[340px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="idkk absolute w-[0.8px] right-[360px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="sfg absolute h-[0.8px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
@@ -60,7 +68,7 @@ export default function Hero(){
                         <div className=" font-semibold leading-5 ">APP STORE</div>
                     </div>
                 </Link>
-                <svg width="878" height="220px" className="absolute top-[260px] z-0  " viewBox="0 0 878 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="878" height="220px" className="absolute top-[360px] z-0  " viewBox="0 0 878 112" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1_2)" className="ige " >
                 <path d="M3 109C265.304 -36.6171 620.373 -27.9836 875 109"  fill="black"  filter="drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px)"   stroke="url(#paint0_linear_1_2)"/>
                 </g>
@@ -74,7 +82,7 @@ export default function Hero(){
                 </svg>
             </div>  
             </div>
-            <div className="grid-cols-10  grid items-center  pt-[178px] mb-20 ">
+            <div className="grid-cols-10  grid items-center  pt-[278px] mb-20 ">
                 <div className="col-span-3 flex flex-col h-[680px] items-start justify-between  ">
                   <div className="flex items-start max-w-[350px]">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
