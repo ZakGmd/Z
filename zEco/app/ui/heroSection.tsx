@@ -13,68 +13,61 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero(){
     const idk = `  bg-clip-text py-2 text-transparent bg-gradient-to-r from-slate-50 to-slate-600 font-bold text-7xl  ` ;
     const container = useRef(null) ;
+    console.log(container)
     useGSAP(()=>{
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: '.idkk' ,
-                scrub: 4 ,
+                trigger: '.animateLines' ,
+                scrub: 2 ,
                 pin: container.current ,
-                start: "top 18%" ,
+                start: "top 10%" ,
             }
         }) ;
         ScrollTrigger.create({
-            trigger: '.idkk' ,
+            trigger: '.animateLines' ,
             start: 'top top' ,
             endTrigger: ".sfag" ,
             end: "bottom bottom" ,
             markers: true ,
         }) ;
-       tl.to('.idkk',{
-            y: -90 ,
+        tl.fromTo(".animateLines",{
+            y: 0 ,
+            autoAlpha: 1, 
+        },{
+            y: -900 ,
             autoAlpha: 0 ,
-        }).to(".svg ",{
-            x : 900 ,
-        }).to(".sfg",{
-            x: -900 ,
-        }).fromTo(".idk",{opacity: 1},{
+        }).fromTo(".animateSecondLines",{
+            autoAlpha:1 ,
+        },{
+            autoAlpha:0 ,
+        }).fromTo(".texts",{opacity: 1},{
             y : -100 ,
             autoAlpha: 0 ,
          }).fromTo(".text-hidden-2",{opacity: 1},{
             y : -20 ,
             autoAlpha: 0 ,
-            duration: 0.2 ,
-         }).fromTo(".forSVG",{
-           
-                
-                 
-                 filter: 'drop-shadow(rgba(57, 133, 210, 0.42) 0px 0px 0px)' ,
-                
-               
-            
-         },{
-            filter: 'drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px)' ,
-          
-         }) ;
-
+            duration: 0.9 ,
+         }) 
+        
 
     },{scope: container});
 
     return(
         <>
         <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 overflow overflow-hidden " ref={container}   >
-            <div className="relative mt-[150px]" >
-               <div className="idkk absolute w-[0.8px] left-[340px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
-            <div className="idkk absolute w-[0.8px] right-[360px] bottom-[240px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
-            <div className="sfg absolute h-[0.8px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
-            <div className="sfg absolute right-[-0.6px] bottom-[-1.4px] rounded-full w-[4.3px] h-[4.6px] bg-slate-700"></div>
+            <div className="relative mt-[180px]" >
+               <div className="animateLines line absolute w-[1px] left-[340px] top-[-100px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
+            <div className="animateLines line absolute w-[1px] right-[360px] top-[-100px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
+            <div className="leftLine animateSecondLines absolute h-[1px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
+            <div className=" absolute right-[-0.6px] bottom-[-1.82px] rounded-full w-[4.3px] h-[4.7px] bg-slate-700"></div>
             </div>
-            <div className="svg absolute h-[0.8px] right-[100px] bottom-[120px] w-[200px] bg-gradient-to-l from-transparent to-slate-700">
-            <div className="svg absolute left-[-0.6px] bottom-[-1.4px] rounded-full w-[4.3px] h-[4.6px] bg-slate-700"></div>
+            <div className="rightLine animateSecondLines absolute h-[1px] right-[100px] bottom-[120px] w-[200px] bg-gradient-to-l from-transparent to-slate-700">
+            <div className=" absolute left-[-0.9px] bottom-[-1.85px] rounded-full w-[4.3px] h-[4.7px] bg-slate-700"></div>
             </div>
             <div className="flex flex-col gap-8 items-center justify-center relative">
                 <div className="flex flex-col gap-2 items-center ">
-                    <span className=" font-bold text-7xl py-2 idk"  >Easy Budgeting,</span>
-                    <span className={`${idk} idk`}>Zero Stress</span>
+                    <span className=" font-bold text-7xl py-2 texts "  >Easy Budgeting,</span>
+                    <span className={`${idk} texts secondTextAnim`}>Zero Stress</span>
                 </div>
                 <div className=" font-normal text-slate-400 text-hidden-2">Smart financial assistant that takes care of your personal finances.</div>
                 <Link href="/" className="flex px-3 py-2 mt-5 gap-1 items-center border border-l-indigo-50 rounded-3xl  ">
@@ -84,9 +77,9 @@ export default function Hero(){
                         <div className=" font-semibold leading-5 ">APP STORE</div>
                     </div>
                 </Link>
-                <svg width="878" height="220px" className="absolute top-[405px] z-0  " viewBox="0 0 878 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="878" height="220px" className="absolute top-[415px] z-0  " viewBox="0 0 878 112" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1_2)" className="forSVG" >
-                <path d="M3 109C265.304 -36.6171 620.373 -27.9836 875 109"  fill="black"   stroke="url(#paint0_linear_1_2)"/>
+                <path d="M3 109C265.304 -36.6171 620.373 -27.9836 875 109"  fill="black"  stroke="url(#paint0_linear_1_2)"/>
                 </g>
                 <defs>
                 <linearGradient id="paint0_linear_1_2" x1="439" y1="3" x2="439" y2="109" gradientUnits="userSpaceOnUse">
@@ -98,7 +91,7 @@ export default function Hero(){
                 </svg>
             </div>  
             </div>
-            <div className="grid-cols-10  grid items-center  pt-[278px] mb-20 ">
+            <div className="grid-cols-10  grid items-center  pt-[278px] my-20 ">
                 <div className="col-span-3 flex flex-col h-[680px] items-start justify-between  ">
                   <div className="flex items-start max-w-[350px]">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
