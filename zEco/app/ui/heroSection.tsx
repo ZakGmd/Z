@@ -17,7 +17,7 @@ export default function Hero(){
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.idkk' ,
-                scrub: 0.4 ,
+                scrub: 4 ,
                 pin: container.current ,
                 start: "top 18%" ,
             }
@@ -30,15 +30,31 @@ export default function Hero(){
             markers: true ,
         }) ;
        tl.to('.idkk',{
-            y: -600 ,
+            y: -90 ,
+            autoAlpha: 0 ,
         }).to(".svg ",{
             x : 900 ,
         }).to(".sfg",{
             x: -900 ,
         }).fromTo(".idk",{opacity: 1},{
-            y : -300 ,
+            y : -100 ,
             autoAlpha: 0 ,
-         })
+         }).fromTo(".text-hidden-2",{opacity: 1},{
+            y : -20 ,
+            autoAlpha: 0 ,
+            duration: 0.2 ,
+         }).fromTo(".forSVG",{
+           
+                
+                 
+                 filter: 'drop-shadow(rgba(57, 133, 210, 0.42) 0px 0px 0px)' ,
+                
+               
+            
+         },{
+            filter: 'drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px)' ,
+          
+         }) ;
 
 
     },{scope: container});
@@ -55,12 +71,12 @@ export default function Hero(){
             <div className="svg absolute h-[0.8px] right-[100px] bottom-[120px] w-[200px] bg-gradient-to-l from-transparent to-slate-700">
             <div className="svg absolute left-[-0.6px] bottom-[-1.4px] rounded-full w-[4.3px] h-[4.6px] bg-slate-700"></div>
             </div>
-            <div className="flex flex-col gap- items-center justify-center relative">
+            <div className="flex flex-col gap-8 items-center justify-center relative">
                 <div className="flex flex-col gap-2 items-center ">
                     <span className=" font-bold text-7xl py-2 idk"  >Easy Budgeting,</span>
                     <span className={`${idk} idk`}>Zero Stress</span>
                 </div>
-                <div className=" font-normal text-slate-400">Smart financial assistant that takes care of your personal finances.</div>
+                <div className=" font-normal text-slate-400 text-hidden-2">Smart financial assistant that takes care of your personal finances.</div>
                 <Link href="/" className="flex px-3 py-2 mt-5 gap-1 items-center border border-l-indigo-50 rounded-3xl  ">
                     <Image src="/apple.svg" alt="Apple Logo" height={24} width={24} />
                     <div className="flex flex-col items-start z-10 ">
@@ -68,9 +84,9 @@ export default function Hero(){
                         <div className=" font-semibold leading-5 ">APP STORE</div>
                     </div>
                 </Link>
-                <svg width="878" height="220px" className="absolute top-[360px] z-0  " viewBox="0 0 878 112" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_f_1_2)" className="ige " >
-                <path d="M3 109C265.304 -36.6171 620.373 -27.9836 875 109"  fill="black"  filter="drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px)"   stroke="url(#paint0_linear_1_2)"/>
+                <svg width="878" height="220px" className="absolute top-[405px] z-0  " viewBox="0 0 878 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_f_1_2)" className="forSVG" >
+                <path d="M3 109C265.304 -36.6171 620.373 -27.9836 875 109"  fill="black"   stroke="url(#paint0_linear_1_2)"/>
                 </g>
                 <defs>
                 <linearGradient id="paint0_linear_1_2" x1="439" y1="3" x2="439" y2="109" gradientUnits="userSpaceOnUse">
