@@ -62,13 +62,13 @@ export default function Hero(){
             opacity: 1 ,
             scaleY:   1 ,
         },{
-            duration: 70 ,
+            duration: 180 ,
             y: 100 ,
             scaleY: 0 ,
             autoAlpha: 0 ,
-        }, "+=1").to(".secondSectionAnimate",{
+        }, "+=1").to(".iphoneContainer",{
             y: -800 ,
-            duration: 40 ,
+            duration: 10 ,
             
         }) ;
         
@@ -153,7 +153,7 @@ export default function Hero(){
                     </div>
                  </div>
                 </div>
-                <div className="col-span-4 flex h-[600px] items-start gap-20">
+                <div className="col-span-4 flex h-[600px] items-start gap-10">
                     <div className="flex flex-col h-full justify-between ">
                     <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
                         <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
@@ -166,10 +166,11 @@ export default function Hero(){
                         </div>
                     </div>
                     </div>
-                    <div className="iphoneContainer relative bg-[#666] p-[7px] w-[340px] h-[600px] rounded-[50px]">
+                    <div className="iphoneContainer p-[12px] rounded-[50px] ">
+                      <div className=" relative bg-[#666] p-[5px] w-[340px] h-[686px] rounded-[50px]">
                        <div className="inner">
                           <div className="popup absolute top-5 w-[90px] h-[25px] rounded-[20px] bg-slate-900 z-10"></div>
-                          <div className="absolute animate-pulse top-[-1.5px] ">
+                          <div className="absolute top-[-1.5px] ">
                         <Image src="foIphn1.svg" alt={""} width={340} height={600} className="pr-[-4px]" />
                        </div>
                        </div>
@@ -178,7 +179,9 @@ export default function Hero(){
                        <i className="btn btn2"></i>
                        <i className="btn btn3"></i>
                        <i className="rightBtn"></i>
+                      </div>
                     </div>
+                    
                     <div className="flex flex-col h-full justify-between ">
                       <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
                         <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
