@@ -18,7 +18,7 @@ export default function Hero(){
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.animateLines' ,
-                scrub: 2 ,
+                scrub: 2.5 ,
                 pin: container.current ,
                 start: "top 10%" ,
             }
@@ -31,10 +31,12 @@ export default function Hero(){
             markers: true ,
         }) ;
         tl.fromTo(".animateLines",{
-            y: 0 ,
+            y: -10 ,
             autoAlpha: 1, 
+            duration: 0.02 ,
         },{
-            y: -900 ,
+            y: -150 ,
+            duration: 2 ,
             autoAlpha: 0 ,
         }).fromTo(".animateSecondLines",{
             autoAlpha:1 ,
@@ -42,12 +44,25 @@ export default function Hero(){
             autoAlpha:0 ,
         }).fromTo(".texts",{opacity: 1},{
             y : -100 ,
+            duration: 2 ,
             autoAlpha: 0 ,
-         }).fromTo(".text-hidden-2",{opacity: 1},{
-            y : -20 ,
+        }).fromTo(".text-hidden-2",{opacity: 1},{
+            y : -70 ,
             autoAlpha: 0 ,
-            duration: 0.9 ,
-         }) 
+            duration: 2 ,
+        }).fromTo(".animateButton",{
+            autoAlpha: 1 ,
+        },{
+            y : -40 ,
+            autoAlpha: 0 ,
+            duration: 2 ,
+        }).fromTo(".forSVG",{    
+            opacity: 1 ,
+            scaleY:   1 ,
+        },{
+            scaleY: 0 ,
+            autoAlpha: 0 ,
+        }) ;
         
 
     },{scope: container});
@@ -69,8 +84,8 @@ export default function Hero(){
                     <span className=" font-bold text-7xl py-2 texts "  >Easy Budgeting,</span>
                     <span className={`${idk} texts secondTextAnim`}>Zero Stress</span>
                 </div>
-                <div className=" font-normal text-slate-400 text-hidden-2">Smart financial assistant that takes care of your personal finances.</div>
-                <Link href="/" className="flex px-3 py-2 mt-5 gap-1 items-center border border-l-indigo-50 rounded-3xl  ">
+                <div className=" font-normal text-slate-400 text-hidden-2 thirdTextAnimate">Smart financial assistant that takes care of your personal finances.</div>
+                <Link href="/" className="flex px-3 py-2 mt-5 gap-1 items-center  rounded-3xl animateButton ">
                     <Image src="/apple.svg" alt="Apple Logo" height={24} width={24} />
                     <div className="flex flex-col items-start z-10 ">
                         <div className=" font-light text-[10px] leading-3  ">Download on the</div>
@@ -91,7 +106,7 @@ export default function Hero(){
                 </svg>
             </div>  
             </div>
-            <div className="grid-cols-10  grid items-center  pt-[278px] my-20 ">
+            <div className="grid-cols-10  grid items-center  pt-[278px] my-20 secondSectionAnimat">
                 <div className="col-span-3 flex flex-col h-[680px] items-start justify-between  ">
                   <div className="flex items-start max-w-[350px]">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
