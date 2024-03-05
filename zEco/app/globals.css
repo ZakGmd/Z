@@ -184,7 +184,6 @@ body {
 }
 .animateButton{
   border: 1px solid #f0f6f9;
-  transition: all 2s ease;
   animation: animateButton 2s cubic-bezier(0.76,-0.58, 0.29, 0.6) 1  ;
 }
 

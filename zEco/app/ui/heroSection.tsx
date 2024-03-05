@@ -18,7 +18,7 @@ export default function Hero(){
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.animateLines' ,
-                scrub: 2.5 ,
+                scrub: 3 ,
                 pin: container.current ,
                 start: "top 10%" ,
             }
@@ -29,6 +29,7 @@ export default function Hero(){
             endTrigger: ".sfag" ,
             end: "bottom bottom" ,
             markers: true ,
+            pinSpacing: true ,
         }) ;
         tl.fromTo(".animateLines",{
             y: -10 ,
@@ -42,26 +43,33 @@ export default function Hero(){
             autoAlpha:1 ,
         },{
             autoAlpha:0 ,
+            duration: 10 ,
         }).fromTo(".texts",{opacity: 1},{
+            duration: 100 ,
             y : -100 ,
-            duration: 2 ,
             autoAlpha: 0 ,
         }).fromTo(".text-hidden-2",{opacity: 1},{
+            duration: 80 ,
             y : -70 ,
             autoAlpha: 0 ,
-            duration: 2 ,
         }).fromTo(".animateButton",{
             autoAlpha: 1 ,
         },{
-            y : -40 ,
+            duration: 80 ,
+            y : -20 ,
             autoAlpha: 0 ,
-            duration: 2 ,
         }).fromTo(".forSVG",{    
             opacity: 1 ,
             scaleY:   1 ,
         },{
+            duration: 70 ,
+            y: 100 ,
             scaleY: 0 ,
             autoAlpha: 0 ,
+        }, "+=1").to(".secondSectionAnimate",{
+            y: -800 ,
+            duration: 40 ,
+            
         }) ;
         
 
@@ -106,7 +114,7 @@ export default function Hero(){
                 </svg>
             </div>  
             </div>
-            <div className="grid-cols-10  grid items-center  pt-[278px] my-20 secondSectionAnimat">
+            <div className="grid-cols-10  grid items-center  pt-[278px] my-20 secondSectionAnimate">
                 <div className="col-span-3 flex flex-col h-[680px] items-start justify-between  ">
                   <div className="flex items-start max-w-[350px]">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
