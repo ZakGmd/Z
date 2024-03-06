@@ -18,18 +18,18 @@ export default function Hero(){
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.animateLines' ,
-                scrub: 3 ,
+                scrub: 8 ,
                 pin: container.current ,
-                start: "top 10%" ,
+                start: "top 11%" ,
             }
         }) ;
         ScrollTrigger.create({
             trigger: '.animateLines' ,
-            start: 'top top' ,
+            start: 'top 5%' ,
             endTrigger: ".sfag" ,
             end: "bottom bottom" ,
             markers: true ,
-            pinSpacing: true ,
+            
         }) ;
         tl.fromTo(".animateLines",{
             y: -10 ,
@@ -45,32 +45,39 @@ export default function Hero(){
             autoAlpha:0 ,
             duration: 10 ,
         }).fromTo(".texts",{opacity: 1},{
-            duration: 100 ,
+            duration: 5000 ,
             y : -100 ,
+            delay: 1 ,
             autoAlpha: 0 ,
-        }).fromTo(".text-hidden-2",{opacity: 1},{
-            duration: 80 ,
+        },40).fromTo(".text-hidden-2",{opacity: 1},{
+            duration: 900 ,
             y : -70 ,
             autoAlpha: 0 ,
-        }).fromTo(".animateButton",{
+            delay: 1 ,
+            ease: "back.out(1.7)",
+        },0.3).fromTo(".animateButton",{
             autoAlpha: 1 ,
         },{
-            duration: 80 ,
+            duration: 900 ,
             y : -20 ,
+            ease: "expoScale(0.5,7,none)",
             autoAlpha: 0 ,
-        }).fromTo(".forSVG",{    
+        },20.5).fromTo(".forSVG",{    
             opacity: 1 ,
             scaleY:   1 ,
         },{
-            duration: 180 ,
+            duration: 5000 ,
             y: 100 ,
             scaleY: 0 ,
+            delay: 20 ,
             autoAlpha: 0 ,
-        }, "+=1").to(".iphoneContainer",{
-            y: -800 ,
-            duration: 10 ,
-            
-        }) ;
+        },40).to(".secondSectionAnimate",{
+            y: -900 ,
+            duration: 10000 ,
+            autoAlpha: 1 ,
+            delay: 1 ,
+            ease: "back.out(1.3)",
+        })
         
 
     },{scope: container});
@@ -78,7 +85,7 @@ export default function Hero(){
     return(
         <>
         <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 overflow overflow-hidden " ref={container}   >
-            <div className="relative mt-[180px]" >
+            <div className="relative mt-[180px] mb-[420px]" >
                <div className="animateLines line absolute w-[1px] left-[340px] top-[-100px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="animateLines line absolute w-[1px] right-[360px] top-[-100px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="leftLine animateSecondLines absolute h-[1px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
@@ -114,9 +121,9 @@ export default function Hero(){
                 </svg>
             </div>  
             </div>
-            <div className="grid-cols-10  grid items-center  pt-[278px] my-20 secondSectionAnimate">
+            <div className="grid-cols-10  grid items-center  secondSectionAnimate">
                 <div className="col-span-3 flex flex-col h-[680px] items-start justify-between  ">
-                  <div className="flex items-start max-w-[350px]">
+                  <div className="flex items-start max-w-[350px] firstCard opacity-0 ">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
@@ -134,7 +141,7 @@ export default function Hero(){
                         </div>
                     </div>     
                   </div>
-                 <div className="flex items-start">
+                 <div className="flex items-star fourthCard opacity-0 ">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
@@ -153,7 +160,7 @@ export default function Hero(){
                     </div>
                  </div>
                 </div>
-                <div className="col-span-4 flex h-[600px] items-start gap-10">
+                <div className="col-span-4 flex h-[600px] items-start gap-20">
                     <div className="flex flex-col h-full justify-between ">
                     <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
                         <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
@@ -166,22 +173,26 @@ export default function Hero(){
                         </div>
                     </div>
                     </div>
-                    <div className="iphoneContainer p-[12px] rounded-[50px] ">
-                      <div className=" relative bg-[#666] p-[5px] w-[340px] h-[686px] rounded-[50px]">
+                    <div className="iphoneContainer relative bg-[#666] w-[340px] h-[600px] rounded-[50px]">
                        <div className="inner">
-                          <div className="popup absolute top-5 w-[90px] h-[25px] rounded-[20px] bg-slate-900 z-10"></div>
-                          <div className="absolute top-[-1.5px] ">
-                        <Image src="foIphn1.svg" alt={""} width={340} height={600} className="pr-[-4px]" />
-                       </div>
-                       </div>
-                       
+                       <svg width="399" height="599" viewBox="0 0 766 1026" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_203_2)">
+<rect x="0" y="-100" width="763" height="800" rx="47.5" stroke="url(#paint0_linear_203_2)" />
+</g>
+<defs>
+<linearGradient id="paint0_linear_203_2" x1="274" y1="405.389" x2="614" y2="862.611" gradientUnits="userSpaceOnUse">
+<stop offset="0.0127183" stop-color="#A3BDFF"/>
+<stop offset="0.88638" stop-color="#CED2DD"/>
+</linearGradient>
+</defs>
+</svg>
+
+                       </div>    
                        <i className="btn btn1"></i>
                        <i className="btn btn2"></i>
                        <i className="btn btn3"></i>
                        <i className="rightBtn"></i>
-                      </div>
                     </div>
-                    
                     <div className="flex flex-col h-full justify-between ">
                       <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
                         <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
@@ -196,7 +207,7 @@ export default function Hero(){
                     </div>
                 </div>
                 <div className="col-span-3 flex flex-col h-[680px] pl-[82px] items-start justify-between">
-                  <div className="flex items-start gap-7 w-full">
+                  <div className="flex items-start gap-7 w-full seconCard opacity-0 ">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
@@ -214,7 +225,7 @@ export default function Hero(){
                         </div>
                     </div>     
                   </div>
-                 <div className="flex items-start gap-7 w-full">
+                  <div className="flex items-start gap-7 w-full thirdCard opacity-0">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
@@ -231,7 +242,7 @@ export default function Hero(){
                             <div className="w-1 h-1 bg-slate-200 rounded-full"></div>
                         </div>
                     </div>
-                 </div>
+                  </div>
                 </div>
             </div>
             <div className=" mt-5 mb-20 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden ">

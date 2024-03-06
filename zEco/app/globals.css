@@ -35,7 +35,7 @@ body {
 .iphoneContainer::before{
   content: '';
   position: absolute;
-  inset: 3px;
+  inset: 4.3px;
   background: black;
   border-radius: 48px;
   
@@ -195,6 +195,8 @@ body {
     opacity: 1;
   }
 }
-.iphoneContainer{
-  box-shadow: -147px -88px 182px -93px rgba(112,168,233,0.45);
+#svvg{
+  -webkit-filter: drop-shadow(-147px -80px 182px -93px rgba(112,168,233,0.75));
+    -moz-filter: drop-shadow(-147px -80px 182px -93px rgba(112,168,233,0.75));
+  filter: drop-shadow(-147px -80px 182px -93px rgba(112,168,233,0.75));
 }
