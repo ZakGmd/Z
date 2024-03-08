@@ -175,18 +175,7 @@ export default function Hero(){
                     </div>
                     <div className="iphoneContainer relative bg-[#666] w-[340px] h-[600px] rounded-[50px]">
                        <div className="inner">
-                       <svg width="399" height="599" viewBox="0 0 766 1026" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_203_2)">
-<rect x="0" y="-100" width="763" height="800" rx="47.5" stroke="url(#paint0_linear_203_2)" />
-</g>
-<defs>
-<linearGradient id="paint0_linear_203_2" x1="274" y1="405.389" x2="614" y2="862.611" gradientUnits="userSpaceOnUse">
-<stop offset="0.0127183" stop-color="#A3BDFF"/>
-<stop offset="0.88638" stop-color="#CED2DD"/>
-</linearGradient>
-</defs>
-</svg>
-
+                        
                        </div>    
                        <i className="btn btn1"></i>
                        <i className="btn btn2"></i>

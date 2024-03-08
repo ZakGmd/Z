@@ -39,8 +39,6 @@ body {
   background: black;
   border-radius: 48px;
   
-  overflow: hidden;
-  
 }
 .inner{
   position: relative ;
@@ -49,7 +47,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow: hidden;
+  
 }
 .btn{
   position: absolute;
@@ -195,7 +193,7 @@ body {
     opacity: 1;
   }
 }
-#svvg{
+.svvg{
   -webkit-filter: drop-shadow(-147px -80px 182px -93px rgba(112,168,233,0.75));
     -moz-filter: drop-shadow(-147px -80px 182px -93px rgba(112,168,233,0.75));
   filter: drop-shadow(-147px -80px 182px -93px rgba(112,168,233,0.75));
