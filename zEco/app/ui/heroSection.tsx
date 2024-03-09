@@ -7,7 +7,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother} from "gsap-trial/ScrollSmoother";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero(){
@@ -18,34 +17,35 @@ export default function Hero(){
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.animateLines' ,
-                scrub: 8 ,
+                scrub: 12 ,
                 pin: container.current ,
-                start: "top 11%" ,
+                start: "top 10%" ,
+                end: "+=19000px"
             }
         }) ;
         ScrollTrigger.create({
             trigger: '.animateLines' ,
-            start: 'top 5%' ,
+            start: 'top 15%' ,
             endTrigger: ".sfag" ,
-            end: "bottom bottom" ,
+            end: "+=19000px" ,
             markers: true ,
             
         }) ;
         tl.fromTo(".animateLines",{
             y: -10 ,
             autoAlpha: 1, 
-            duration: 0.02 ,
+            duration: 300 ,
         },{
             y: -150 ,
-            duration: 2 ,
+            duration: 70 ,
             autoAlpha: 0 ,
         }).fromTo(".animateSecondLines",{
             autoAlpha:1 ,
         },{
             autoAlpha:0 ,
-            duration: 10 ,
+            duration: 2000 ,
         }).fromTo(".texts",{opacity: 1},{
-            duration: 5000 ,
+            duration: 2000 ,
             y : -100 ,
             delay: 1 ,
             autoAlpha: 0 ,
@@ -72,11 +72,51 @@ export default function Hero(){
             delay: 20 ,
             autoAlpha: 0 ,
         },40).to(".secondSectionAnimate",{
-            y: -900 ,
-            duration: 10000 ,
+            y: -950 ,
+            duration: 1000 ,
             autoAlpha: 1 ,
-            delay: 1 ,
+            delay: 7 ,
             ease: "back.out(1.3)",
+        }).fromTo(".firstCard",{
+            opacity: 0 ,
+            duration: 7000 ,
+        },{
+            autoAlpha: 1 , 
+            opacity: 1,
+            stagger: 2 ,
+            ease: "back.out(1.3)",
+            duration: 7000 ,
+            y: 30 ,
+        }).fromTo(".seconCard",{
+            opacity: 0 ,
+            duration: 3400 ,
+        },{
+            autoAlpha: 1     , 
+            opacity: 1  ,
+            stagger: 2 ,
+            ease: "back.out(1.3)",
+            duration: 3400 ,
+            y: 30 ,
+        }).fromTo(".thirdCard",{
+            opacity: 0 ,
+            duration: 3400 ,
+        },{
+            autoAlpha: 1 , 
+            opacity: 1  ,
+            stagger: 2 ,
+            ease: "back.out(1.3)",
+            duration: 3400 ,
+            y: 30 ,
+        }).fromTo(".fourthCard",{
+            opacity: 0 ,
+            duration: 3400 ,
+        },{
+            autoAlpha: 1,
+            stagger: 2 , 
+            opacity: 1  ,
+            ease: "back.out(1.3)",
+            duration: 3400 ,
+            y: 30 ,
         })
         
 
@@ -123,8 +163,8 @@ export default function Hero(){
             </div>
             <div className="grid-cols-10  grid items-center  secondSectionAnimate">
                 <div className="col-span-3 flex flex-col h-[680px] items-start justify-between  ">
-                  <div className="flex items-start max-w-[350px] firstCard opacity-0 ">
-                    <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
+                  <div className=" flex items-start max-w-[350px]  firstCard ">
+                    <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px]  border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
                                 <div className="p-2 items-center justify-center flex border border-sky-100 max-w-[50px] rounded-xl">
@@ -141,7 +181,7 @@ export default function Hero(){
                         </div>
                     </div>     
                   </div>
-                 <div className="flex items-star fourthCard opacity-0 ">
+                 <div className="flex items-star fourthCard    ">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
@@ -174,9 +214,12 @@ export default function Hero(){
                     </div>
                     </div>
                     <div className="iphoneContainer relative bg-[#666] w-[340px] h-[600px] rounded-[50px]">
-                       <div className="inner">
-                        
-                       </div>    
+                    <div className="inner">
+                          <div className="popup absolute top-5 w-[90px] h-[25px] rounded-[20px] bg-slate-900 z-10"></div>
+                          <div className="absolute  top-[-1.5px] ">
+                        <Image src="foIphn1.svg" alt={""} width={340} height={600} className="pr-[-4px]" />
+                       </div>
+                       </div>   
                        <i className="btn btn1"></i>
                        <i className="btn btn2"></i>
                        <i className="btn btn3"></i>
@@ -196,7 +239,7 @@ export default function Hero(){
                     </div>
                 </div>
                 <div className="col-span-3 flex flex-col h-[680px] pl-[82px] items-start justify-between">
-                  <div className="flex items-start gap-7 w-full seconCard opacity-0 ">
+                  <div className="flex items-start gap-7 w-full seconCard    ">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
@@ -214,7 +257,7 @@ export default function Hero(){
                         </div>
                     </div>     
                   </div>
-                  <div className="flex items-start gap-7 w-full thirdCard opacity-0">
+                  <div className="flex items-start gap-7 w-full thirdCard   ">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px] border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
                         <div className="flex flex-col items-start gap-5 ">
                             <div className="flex flex-col gap-5">
