@@ -114,9 +114,9 @@ body {
 }
 
 .forSVG{
-  -webkit-filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px);
-  -moz-filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px);
-  filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px);
+  -webkit-filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -44px 40px);
+  -moz-filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -44px 40px);
+  filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -44px 40px);
   transition: transform 1.3s ease linear ;
   animation: svgAnimation 1.3s cubic-bezier(0.76,-0.58, 0.29, 0.6) 1  ;
 
@@ -133,9 +133,9 @@ body {
     opacity: 1;
     transform: scaleY(1);
   }100%{
-     -webkit-filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px);
-    -moz-filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px);
-    filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -33px 40px)
+     -webkit-filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -44px 40px);
+    -moz-filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -44px 40px);
+    filter: drop-shadow(rgba(57, 133, 210, 0.42) 0px -44px 40px)
   }
 }
 .line{

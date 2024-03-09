@@ -17,106 +17,142 @@ export default function Hero(){
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.animateLines' ,
-                scrub: 12 ,
+                scrub: 7 ,
                 pin: container.current ,
                 start: "top 10%" ,
-                end: "+=19000px"
+                end: "+=1100px" ,
             }
         }) ;
         ScrollTrigger.create({
             trigger: '.animateLines' ,
-            start: 'top 15%' ,
+            start: 'top 10%' ,
             endTrigger: ".sfag" ,
-            end: "+=19000px" ,
+            end: "+=1100px" ,
             markers: true ,
             
         }) ;
-        tl.fromTo(".animateLines",{
+        tl.fromTo(".leftLine",{
+            opacity: 1 ,  
+            duration: 100 ,
+        },{
+            x:-80 ,
+            opacity:0 ,
+            duration: 10 ,
+        },"+=30").fromTo(".rightLine",{
+            autoAlpha: 1 ,
+            duration: 100 ,
+        },{
+            x:80 ,
+            autoAlpha:0 ,
+            duration: 10 ,
+        },"+=30").fromTo(".animateLines",{
             y: -10 ,
             autoAlpha: 1, 
-            duration: 300 ,
         },{
             y: -150 ,
-            duration: 70 ,
+            duration: 700 ,
+            stagger: 2, 
             autoAlpha: 0 ,
-        }).fromTo(".animateSecondLines",{
-            autoAlpha:1 ,
-        },{
-            autoAlpha:0 ,
-            duration: 2000 ,
         }).fromTo(".texts",{opacity: 1},{
-            duration: 2000 ,
-            y : -100 ,
-            delay: 1 ,
+            duration: 880 ,
+            y : -120 ,
+            delay: 4 ,
             autoAlpha: 0 ,
+            ease: "slow(0.7,0.7,false)",
         },40).fromTo(".text-hidden-2",{opacity: 1},{
             duration: 900 ,
             y : -70 ,
             autoAlpha: 0 ,
-            delay: 1 ,
-            ease: "back.out(1.7)",
+            delay: 4 ,
+            ease: "slow(0.7,0.7,false)",
         },0.3).fromTo(".animateButton",{
             autoAlpha: 1 ,
         },{
-            duration: 900 ,
+            duration: 300 ,
             y : -20 ,
-            ease: "expoScale(0.5,7,none)",
             autoAlpha: 0 ,
         },20.5).fromTo(".forSVG",{    
             opacity: 1 ,
             scaleY:   1 ,
         },{
-            duration: 5000 ,
+            duration: 780 ,
             y: 100 ,
             scaleY: 0 ,
-            delay: 20 ,
+            ease: "slow(0.7,0.7,false)",
             autoAlpha: 0 ,
-        },40).to(".secondSectionAnimate",{
-            y: -950 ,
-            duration: 1000 ,
+        }).to(".secondSectionAnimate",{
+            y: -880 ,
+            duration: 850 ,
             autoAlpha: 1 ,
-            delay: 7 ,
-            ease: "back.out(1.3)",
+            ease: "back.out(1.8)",
         }).fromTo(".firstCard",{
             opacity: 0 ,
-            duration: 7000 ,
+            boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
+            y: -30 ,
+            duration: 540 ,
         },{
             autoAlpha: 1 , 
             opacity: 1,
-            stagger: 2 ,
-            ease: "back.out(1.3)",
-            duration: 7000 ,
+            stagger: 1 ,
+            boxShadow: "55px -1px 80px -52px rgba(112,168,233,0.75)" ,
+            ease: "power4.out",
+            duration: 1500  ,
             y: 30 ,
+        }).to(".firstCard",{
+            boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
+            autoAlpha: 0 ,
+            duration: 1500  ,
+            ease: "power4.out",
+        }).to(".firstImage",{
+            autoAlpha: 0 ,
         }).fromTo(".seconCard",{
             opacity: 0 ,
-            duration: 3400 ,
-        },{
-            autoAlpha: 1     , 
-            opacity: 1  ,
-            stagger: 2 ,
-            ease: "back.out(1.3)",
-            duration: 3400 ,
-            y: 30 ,
-        }).fromTo(".thirdCard",{
-            opacity: 0 ,
-            duration: 3400 ,
+            y: -30 ,
+            duration: 540 ,
         },{
             autoAlpha: 1 , 
             opacity: 1  ,
-            stagger: 2 ,
-            ease: "back.out(1.3)",
-            duration: 3400 ,
+            ease: "power4.out",
+            boxShadow: "-55px -1px 80px -52px rgba(112,168,233,0.75)" ,
+            duration: 1500 ,
             y: 30 ,
+        }).to(".seconCard",{
+            boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
+            autoAlpha: 0 ,
+            duration: 1500 ,
+            ease: "power4.out",
+        }).fromTo(".thirdCard",{
+            opacity: 0 ,
+            y: -30 ,
+            duration: 540 ,
+        },{
+            autoAlpha: 1 , 
+            opacity: 1  ,
+            ease: "power4.out",
+            boxShadow: "-55px -1px 80px -52px rgba(112,168,233,0.75)" ,
+            duration: 1500  ,
+            y: 30 ,
+        }).to(".thirdCard",{
+            boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
+            autoAlpha: 0 ,
+            duration: 1500  ,
+            ease: "power4.out",
         }).fromTo(".fourthCard",{
             opacity: 0 ,
-            duration: 3400 ,
+            y: 30 ,
+            duration: 540 ,
         },{
-            autoAlpha: 1,
-            stagger: 2 , 
+            autoAlpha: 1, 
             opacity: 1  ,
             ease: "back.out(1.3)",
-            duration: 3400 ,
+            boxShadow: "55px -1px 80px -52px rgba(112,168,233,0.75)" ,
+            duration: 1500  ,
             y: 30 ,
+        }).to(".fourthCard",{
+            boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
+            autoAlpha: 0 ,
+            duration: 1500  ,
+            ease: "power4.out",
         })
         
 
@@ -125,13 +161,13 @@ export default function Hero(){
     return(
         <>
         <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 overflow overflow-hidden " ref={container}   >
-            <div className="relative mt-[180px] mb-[420px]" >
+            <div className="relative mt-[180px] mb-[370px]" >
                <div className="animateLines line absolute w-[1px] left-[340px] top-[-100px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="animateLines line absolute w-[1px] right-[360px] top-[-100px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
-            <div className="leftLine animateSecondLines absolute h-[1px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
+            <div className="leftLine absolute h-[1px] left-[100px] bottom-[120px] w-[200px] bg-gradient-to-r from-transparent to-slate-700">
             <div className=" absolute right-[-0.6px] bottom-[-1.82px] rounded-full w-[4.3px] h-[4.7px] bg-slate-700"></div>
             </div>
-            <div className="rightLine animateSecondLines absolute h-[1px] right-[100px] bottom-[120px] w-[200px] bg-gradient-to-l from-transparent to-slate-700">
+            <div className="rightLine absolute h-[1px] right-[100px] bottom-[120px] w-[200px] bg-gradient-to-l from-transparent to-slate-700">
             <div className=" absolute left-[-0.9px] bottom-[-1.85px] rounded-full w-[4.3px] h-[4.7px] bg-slate-700"></div>
             </div>
             <div className="flex flex-col gap-8 items-center justify-center relative">
@@ -147,7 +183,7 @@ export default function Hero(){
                         <div className=" font-semibold leading-5 ">APP STORE</div>
                     </div>
                 </Link>
-                <svg width="878" height="220px" className="absolute top-[415px] z-0  " viewBox="0 0 878 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="878" height="270px" className="absolute top-[455px] z-0  " viewBox="0 0 878 112" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1_2)" className="forSVG" >
                 <path d="M3 109C265.304 -36.6171 620.373 -27.9836 875 109"  fill="black"  stroke="url(#paint0_linear_1_2)"/>
                 </g>
@@ -204,7 +240,7 @@ export default function Hero(){
                     <div className="flex flex-col h-full justify-between ">
                     <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
                         <div className=" p-2  items-center justify-center  border border-sky-100 rounded-xl">
-                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28} />
+                            <Image src="/graph.svg" alt={"graphSvg Logo"} width={28} height={28}  />
                         </div>
                     </div>
                     <div className="p-2 flex items-center justify-center border border-sky-200 rounded-2xl">
@@ -217,7 +253,7 @@ export default function Hero(){
                     <div className="inner">
                           <div className="popup absolute top-5 w-[90px] h-[25px] rounded-[20px] bg-slate-900 z-10"></div>
                           <div className="absolute  top-[-1.5px] ">
-                        <Image src="foIphn1.svg" alt={""} width={340} height={600} className="pr-[-4px]" />
+                        <Image src="foIphn1.svg" alt={""} width={340} height={600} className="pr-[-4px] firstImage" />
                        </div>
                        </div>   
                        <i className="btn btn1"></i>
