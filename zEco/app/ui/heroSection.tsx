@@ -17,18 +17,17 @@ export default function Hero(){
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.animateLines' ,
-                scrub: 7 ,
+                scrub: 15 ,
                 pin: container.current ,
                 start: "top 10%" ,
-                end: "+=1100px" ,
+                end: "+=1300px"
             }
         }) ;
         ScrollTrigger.create({
             trigger: '.animateLines' ,
             start: 'top 10%' ,
             endTrigger: ".sfag" ,
-            end: "+=1100px" ,
-            markers: true ,
+            end: "+=1100px"
             
         }) ;
         tl.fromTo(".leftLine",{
@@ -45,7 +44,7 @@ export default function Hero(){
             x:80 ,
             autoAlpha:0 ,
             duration: 10 ,
-        },"+=30").fromTo(".animateLines",{
+        }).fromTo(".animateLines",{
             y: -10 ,
             autoAlpha: 1, 
         },{
@@ -58,18 +57,19 @@ export default function Hero(){
             y : -120 ,
             delay: 4 ,
             autoAlpha: 0 ,
-            ease: "slow(0.7,0.7,false)",
+            ease: "power1.inOut",
         },40).fromTo(".text-hidden-2",{opacity: 1},{
             duration: 900 ,
-            y : -70 ,
+            y : -30 ,
             autoAlpha: 0 ,
             delay: 4 ,
-            ease: "slow(0.7,0.7,false)",
+            ease: "power1.Out",
         },0.3).fromTo(".animateButton",{
             autoAlpha: 1 ,
         },{
             duration: 300 ,
             y : -20 ,
+            ease: "power1.inOut",
             autoAlpha: 0 ,
         },20.5).fromTo(".forSVG",{    
             opacity: 1 ,
@@ -82,77 +82,98 @@ export default function Hero(){
             autoAlpha: 0 ,
         }).to(".secondSectionAnimate",{
             y: -880 ,
-            duration: 850 ,
+            duration: 1750 ,
             autoAlpha: 1 ,
             ease: "back.out(1.8)",
         }).fromTo(".firstCard",{
             opacity: 0 ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             y: -30 ,
-            duration: 540 ,
+            duration: 40 ,
         },{
             autoAlpha: 1 , 
             opacity: 1,
             stagger: 1 ,
             boxShadow: "55px -1px 80px -52px rgba(112,168,233,0.75)" ,
             ease: "power4.out",
-            duration: 1500  ,
+            duration: 2600  ,
             y: 30 ,
         }).to(".firstCard",{
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 1500  ,
+            duration: 2600  ,
             ease: "power4.out",
-        }).to(".firstImage",{
-            autoAlpha: 0 ,
         }).fromTo(".seconCard",{
             opacity: 0 ,
             y: -30 ,
-            duration: 540 ,
+            duration: 2600 ,
         },{
             autoAlpha: 1 , 
             opacity: 1  ,
             ease: "power4.out",
             boxShadow: "-55px -1px 80px -52px rgba(112,168,233,0.75)" ,
-            duration: 1500 ,
+            duration: 2600 ,
             y: 30 ,
         }).to(".seconCard",{
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 1500 ,
+            duration: 2600 ,
             ease: "power4.out",
         }).fromTo(".thirdCard",{
             opacity: 0 ,
             y: -30 ,
-            duration: 540 ,
+            duration: 2600 ,
         },{
             autoAlpha: 1 , 
             opacity: 1  ,
             ease: "power4.out",
             boxShadow: "-55px -1px 80px -52px rgba(112,168,233,0.75)" ,
-            duration: 1500  ,
+            duration: 2600  ,
             y: 30 ,
         }).to(".thirdCard",{
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 1500  ,
+            duration: 2600  ,
             ease: "power4.out",
         }).fromTo(".fourthCard",{
             opacity: 0 ,
             y: 30 ,
-            duration: 540 ,
+            duration: 2600 ,
         },{
             autoAlpha: 1, 
             opacity: 1  ,
             ease: "back.out(1.3)",
             boxShadow: "55px -1px 80px -52px rgba(112,168,233,0.75)" ,
-            duration: 1500  ,
+            duration: 2600  ,
             y: 30 ,
         }).to(".fourthCard",{
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 1500  ,
+            duration: 2600  ,
             ease: "power4.out",
+        }).fromTo(".hideSecond",{    
+            autoAlpha: 1 ,
+        },{
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.hideSecond' ,
+                start: "810px center " ,
+                end: "+=100px" ,
+                scrub: 4 ,
+                pinSpacing: true ,
+            } ,
+            duration: 2500 ,
+            y: -1400 ,
+            ease: "power4.out" ,
+            autoAlpha: 0 ,
+        }).fromTo(".sectionn",{
+            autoAlpha: 0 ,
+        },{
+            
+            duration: 2500 ,
+            y: -1000 ,
+            ease: "power4.out" ,
+            autoAlpha: 1 ,
         })
         
 
@@ -197,7 +218,7 @@ export default function Hero(){
                 </svg>
             </div>  
             </div>
-            <div className="grid-cols-10  grid items-center  secondSectionAnimate">
+            <div className="grid-cols-10  grid items-center  secondSectionAnimate hideSecond">
                 <div className="col-span-3 flex flex-col h-[680px] items-start justify-between  ">
                   <div className=" flex items-start max-w-[350px]  firstCard ">
                     <div className="flex px-4 py-5 items-start border-[1.7px] max-w-[350px]  border-white/65 bg-gradient-to-b from-white/15 from-8%  via-gray-900 via-50%  to-black  backdrop-filter blur-[0.3px] rounded-xl ">
@@ -253,7 +274,7 @@ export default function Hero(){
                     <div className="inner">
                           <div className="popup absolute top-5 w-[90px] h-[25px] rounded-[20px] bg-slate-900 z-10"></div>
                           <div className="absolute  top-[-1.5px] ">
-                        <Image src="foIphn1.svg" alt={""} width={340} height={600} className="pr-[-4px] firstImage" />
+                        <Image src="foIphn1.svg" alt={""} width={340} height={600} className="pr-[-4px] " />
                        </div>
                        </div>   
                        <i className="btn btn1"></i>
@@ -313,7 +334,7 @@ export default function Hero(){
                   </div>
                 </div>
             </div>
-            <div className=" mt-5 mb-20 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden ">
+            <div className="sectionn mb-20 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden">
               <div className="p-20 flex-1 flex flex-col max-w-[880px] gap-6 items-start ">
                 <div className="text-start flex flex-col gap-3 ">
                     <div className="bg-clip-text py-2 text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 font-bold text-6xl">6 Months free of Zero Premium</div>
