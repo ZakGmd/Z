@@ -20,27 +20,38 @@ export default function Hero(){
                 scrub: 15 ,
                 pin: container.current ,
                 start: "top 10%" ,
-                end: "+=1300px"
+                
             }
         }) ;
         ScrollTrigger.create({
             trigger: '.animateLines' ,
             start: 'top 10%' ,
             endTrigger: ".sfag" ,
-            end: "+=1100px"
             
         }) ;
         tl.fromTo(".leftLine",{
             opacity: 1 ,  
-            duration: 100 ,
+            duration: 70 ,
         },{
+            scrollTrigger:{
+                trigger: '.texts' ,
+                scrub: 1 ,
+                start: "210px center " ,
+                end: "+=150px" ,
+            } ,
             x:-80 ,
             opacity:0 ,
             duration: 10 ,
-        },"+=30").fromTo(".rightLine",{
+        }).fromTo(".rightLine",{
             autoAlpha: 1 ,
-            duration: 100 ,
+            duration: 70 ,
         },{
+            scrollTrigger:{
+                trigger: '.texts' ,
+                scrub: 1 ,
+                start: "210px center " ,
+                end: "+=150px" ,
+            } ,
             x:80 ,
             autoAlpha:0 ,
             duration: 10 ,
@@ -48,108 +59,158 @@ export default function Hero(){
             y: -10 ,
             autoAlpha: 1, 
         },{
+            scrollTrigger:{
+                trigger: '.texts' ,
+                scrub: 1 ,
+                start: "210px center " ,
+                end: "+=200px" ,
+            } ,
             y: -150 ,
             duration: 700 ,
             stagger: 2, 
             autoAlpha: 0 ,
         }).fromTo(".texts",{opacity: 1},{
-            duration: 880 ,
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.leftLine' ,
+                scrub: 2 ,
+                start: "70px center " ,
+                end: "+=120px" ,
+            } ,
+            duration: 780 ,
             y : -120 ,
-            delay: 4 ,
+            stagger: 1 , 
             autoAlpha: 0 ,
             ease: "power1.inOut",
-        },40).fromTo(".text-hidden-2",{opacity: 1},{
-            duration: 900 ,
+        }).fromTo(".text-hidden-2",{opacity: 1},{
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.text-hidden-2' ,
+                scrub: 1 ,
+                start: "120px center " ,
+                end: "+=200px" ,
+            } ,
+            duration: 700 ,
             y : -30 ,
             autoAlpha: 0 ,
             delay: 4 ,
             ease: "power1.Out",
-        },0.3).fromTo(".animateButton",{
+        }).fromTo(".animateButton",{
             autoAlpha: 1 ,
         },{
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.text-hidden-2' ,
+                scrub: 1 ,
+                start: "190px center " ,
+                end: "+=200px" ,
+            } ,
             duration: 300 ,
             y : -20 ,
             ease: "power1.inOut",
             autoAlpha: 0 ,
-        },20.5).fromTo(".forSVG",{    
+        }).fromTo(".forSVG",{    
             opacity: 1 ,
             scaleY:   1 ,
         },{
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.animateButton' ,
+                scrub: 1 ,
+                start: "100px center " ,
+                end: "+=200px" ,
+            } ,
             duration: 780 ,
             y: 100 ,
             scaleY: 0 ,
             ease: "slow(0.7,0.7,false)",
             autoAlpha: 0 ,
         }).to(".secondSectionAnimate",{
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.secondSectionAnimate' ,
+                scrub: 1 ,
+                start: "100px center " ,
+                end: "+=200px" ,
+            } ,
             y: -880 ,
             duration: 1750 ,
             autoAlpha: 1 ,
             ease: "back.out(1.8)",
         }).fromTo(".firstCard",{
+          
             opacity: 0 ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             y: -30 ,
-            duration: 40 ,
         },{
+              scrollTrigger:{
+                markers: true ,
+                trigger: '.firstCard' ,
+                scrub: 2 ,
+                start: "2500px center " ,
+                end: "+=280px" ,
+            } ,
             autoAlpha: 1 , 
             opacity: 1,
-            stagger: 1 ,
             boxShadow: "55px -1px 80px -52px rgba(112,168,233,0.75)" ,
             ease: "power4.out",
-            duration: 2600  ,
+            duration: 700  ,
             y: 30 ,
         }).to(".firstCard",{
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 2600  ,
+            duration: 700  ,
             ease: "power4.out",
         }).fromTo(".seconCard",{
             opacity: 0 ,
             y: -30 ,
-            duration: 2600 ,
+            duration: 1 ,
         },{
             autoAlpha: 1 , 
             opacity: 1  ,
             ease: "power4.out",
             boxShadow: "-55px -1px 80px -52px rgba(112,168,233,0.75)" ,
-            duration: 2600 ,
+            duration: 700 ,
+            stagger: 300 ,
             y: 30 ,
         }).to(".seconCard",{
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 2600 ,
+            duration: 700 ,
             ease: "power4.out",
         }).fromTo(".thirdCard",{
             opacity: 0 ,
             y: -30 ,
-            duration: 2600 ,
+            duration: 700 ,
         },{
             autoAlpha: 1 , 
             opacity: 1  ,
             ease: "power4.out",
             boxShadow: "-55px -1px 80px -52px rgba(112,168,233,0.75)" ,
-            duration: 2600  ,
+            duration: 700  ,
+            stagger: 300 ,
             y: 30 ,
         }).to(".thirdCard",{
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 2600  ,
+            duration: 700  ,
             ease: "power4.out",
         }).fromTo(".fourthCard",{
             opacity: 0 ,
-            y: 30 ,
-            duration: 2600 ,
+            y: -30 ,
+            duration: 700 ,
         },{
             autoAlpha: 1, 
             opacity: 1  ,
-            ease: "back.out(1.3)",
+            ease: "power4.out",
             boxShadow: "55px -1px 80px -52px rgba(112,168,233,0.75)" ,
-            duration: 2600  ,
+            duration: 700  ,
+            stagger: 300 ,
             y: 30 ,
         }).to(".fourthCard",{
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 2600  ,
+            duration: 700  ,
             ease: "power4.out",
         }).fromTo(".hideSecond",{    
             autoAlpha: 1 ,
@@ -157,7 +218,7 @@ export default function Hero(){
             scrollTrigger:{
                 markers: true ,
                 trigger: '.hideSecond' ,
-                start: "810px center " ,
+                start: "7810px center " ,
                 end: "+=100px" ,
                 scrub: 4 ,
                 pinSpacing: true ,
@@ -169,7 +230,13 @@ export default function Hero(){
         }).fromTo(".sectionn",{
             autoAlpha: 0 ,
         },{
-            
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.sectionn' ,
+                scrub: 1 ,
+                start: "210px center " ,
+                end: "+=150px" ,
+            } ,
             duration: 2500 ,
             y: -1000 ,
             ease: "power4.out" ,
