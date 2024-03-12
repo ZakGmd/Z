@@ -17,16 +17,17 @@ export default function Hero(){
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.animateLines' ,
-                scrub: 15 ,
                 pin: container.current ,
                 start: "top 10%" ,
-                
+                end: "+=8000",
+
             }
         }) ;
         ScrollTrigger.create({
             trigger: '.animateLines' ,
             start: 'top 10%' ,
             endTrigger: ".sfag" ,
+            end: "+=8000",
             
         }) ;
         tl.fromTo(".leftLine",{
@@ -71,84 +72,81 @@ export default function Hero(){
             autoAlpha: 0 ,
         }).fromTo(".texts",{opacity: 1},{
             scrollTrigger:{
-                markers: true ,
                 trigger: '.leftLine' ,
                 scrub: 2 ,
+                
                 start: "70px center " ,
                 end: "+=120px" ,
             } ,
             duration: 780 ,
             y : -120 ,
-            stagger: 1 , 
             autoAlpha: 0 ,
             ease: "power1.inOut",
         }).fromTo(".text-hidden-2",{opacity: 1},{
             scrollTrigger:{
-                markers: true ,
                 trigger: '.text-hidden-2' ,
                 scrub: 1 ,
                 start: "120px center " ,
-                end: "+=200px" ,
+                end: "+=80px" ,
             } ,
             duration: 700 ,
             y : -30 ,
             autoAlpha: 0 ,
-            delay: 4 ,
             ease: "power1.Out",
         }).fromTo(".animateButton",{
             autoAlpha: 1 ,
         },{
             scrollTrigger:{
-                markers: true ,
                 trigger: '.text-hidden-2' ,
                 scrub: 1 ,
-                start: "190px center " ,
-                end: "+=200px" ,
+                start: "140px center " ,
+                end: "+=80px" ,
             } ,
             duration: 300 ,
             y : -20 ,
-            ease: "power1.inOut",
+            ease: "power1.Out",
             autoAlpha: 0 ,
         }).fromTo(".forSVG",{    
             opacity: 1 ,
             scaleY:   1 ,
         },{
             scrollTrigger:{
-                markers: true ,
                 trigger: '.animateButton' ,
                 scrub: 1 ,
                 start: "100px center " ,
-                end: "+=200px" ,
+                end: "+=170px" ,
             } ,
             duration: 780 ,
             y: 100 ,
             scaleY: 0 ,
             ease: "slow(0.7,0.7,false)",
             autoAlpha: 0 ,
-        }).to(".secondSectionAnimate",{
+        }).fromTo(".secondSectionAnimate",{
+            autoAlpha: 0 ,
+        },{
             scrollTrigger:{
                 markers: true ,
-                trigger: '.secondSectionAnimate' ,
-                scrub: 1 ,
-                start: "100px center " ,
-                end: "+=200px" ,
+                trigger: '.animateButton' ,
+                scrub: 4 ,
+                start: "140px center " ,
+                
             } ,
             y: -880 ,
-            duration: 1750 ,
+            duration: 400 ,
             autoAlpha: 1 ,
-            ease: "back.out(1.8)",
+            ease: "slow(0.7,0.7,false)",
         }).fromTo(".firstCard",{
           
             opacity: 0 ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             y: -30 ,
         },{
-              scrollTrigger:{
+            scrollTrigger:{
                 markers: true ,
                 trigger: '.firstCard' ,
-                scrub: 2 ,
-                start: "2500px center " ,
-                end: "+=280px" ,
+                scrub: 1 ,
+                start: "80px center " ,
+                end: "+=120px" ,
             } ,
             autoAlpha: 1 , 
             opacity: 1,
@@ -157,6 +155,13 @@ export default function Hero(){
             duration: 700  ,
             y: 30 ,
         }).to(".firstCard",{
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.secondSectionAnimate' ,
+                scrub: 1 ,
+                start: "110px center " ,
+                end: "+=100px" ,
+            } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
             duration: 700  ,
@@ -166,6 +171,13 @@ export default function Hero(){
             y: -30 ,
             duration: 1 ,
         },{
+            scrollTrigger:{
+                markers: true ,
+                trigger: '.secondSectionAnimate' ,
+                scrub: 1 ,
+                start: "113px center " ,
+                end: "+=100px" ,
+            } ,
             autoAlpha: 1 , 
             opacity: 1  ,
             ease: "power4.out",
@@ -174,6 +186,7 @@ export default function Hero(){
             stagger: 300 ,
             y: 30 ,
         }).to(".seconCard",{
+            
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
             duration: 700 ,
@@ -183,6 +196,7 @@ export default function Hero(){
             y: -30 ,
             duration: 700 ,
         },{
+           
             autoAlpha: 1 , 
             opacity: 1  ,
             ease: "power4.out",
@@ -200,6 +214,7 @@ export default function Hero(){
             y: -30 ,
             duration: 700 ,
         },{
+            
             autoAlpha: 1, 
             opacity: 1  ,
             ease: "power4.out",
@@ -232,10 +247,10 @@ export default function Hero(){
         },{
             scrollTrigger:{
                 markers: true ,
-                trigger: '.sectionn' ,
+                trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
-                start: "210px center " ,
-                end: "+=150px" ,
+                start: "260px center " ,
+                end: "+=80px" ,
             } ,
             duration: 2500 ,
             y: -1000 ,
