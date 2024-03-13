@@ -19,7 +19,7 @@ export default function Hero(){
                 trigger: '.animateLines' ,
                 pin: container.current ,
                 start: "top 10%" ,
-                end: "+=8000",
+                end: "+=1500",
 
             }
         }) ;
@@ -27,7 +27,7 @@ export default function Hero(){
             trigger: '.animateLines' ,
             start: 'top 10%' ,
             endTrigger: ".sfag" ,
-            end: "+=8000",
+            end: "+=1500",
             
         }) ;
         tl.fromTo(".leftLine",{
@@ -38,7 +38,7 @@ export default function Hero(){
                 trigger: '.texts' ,
                 scrub: 1 ,
                 start: "210px center " ,
-                end: "+=150px" ,
+                end: "+=300px" ,
             } ,
             x:-80 ,
             opacity:0 ,
@@ -51,7 +51,7 @@ export default function Hero(){
                 trigger: '.texts' ,
                 scrub: 1 ,
                 start: "210px center " ,
-                end: "+=150px" ,
+                end: "+=300px" ,
             } ,
             x:80 ,
             autoAlpha:0 ,
@@ -64,7 +64,7 @@ export default function Hero(){
                 trigger: '.texts' ,
                 scrub: 1 ,
                 start: "210px center " ,
-                end: "+=200px" ,
+                end: "+=300px" ,
             } ,
             y: -150 ,
             duration: 700 ,
@@ -125,7 +125,7 @@ export default function Hero(){
             autoAlpha: 0 ,
         },{
             scrollTrigger:{
-                markers: true ,
+               
                 trigger: '.animateButton' ,
                 scrub: 4 ,
                 start: "140px center " ,
@@ -142,10 +142,10 @@ export default function Hero(){
             y: -30 ,
         },{
             scrollTrigger:{
-                markers: true ,
+               
                 trigger: '.firstCard' ,
                 scrub: 1 ,
-                start: "80px center " ,
+                start: "120px center " ,
                 end: "+=120px" ,
             } ,
             autoAlpha: 1 , 
@@ -156,37 +156,45 @@ export default function Hero(){
             y: 30 ,
         }).to(".firstCard",{
             scrollTrigger:{
-                markers: true ,
-                trigger: '.secondSectionAnimate' ,
+               
+                trigger: '.firstCard' ,
                 scrub: 1 ,
-                start: "110px center " ,
-                end: "+=100px" ,
+                toggleActions: "restart none none none " ,
+                start: "240px center " ,
+                end: "+=50px" ,
             } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
             duration: 700  ,
+            y: -30 ,
             ease: "power4.out",
         }).fromTo(".seconCard",{
             opacity: 0 ,
             y: -30 ,
-            duration: 1 ,
+            
         },{
             scrollTrigger:{
-                markers: true ,
+               
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
-                start: "113px center " ,
-                end: "+=100px" ,
+                start: "305px center " ,
+                end: "+=120px" ,
             } ,
             autoAlpha: 1 , 
             opacity: 1  ,
             ease: "power4.out",
             boxShadow: "-55px -1px 80px -52px rgba(112,168,233,0.75)" ,
             duration: 700 ,
-            stagger: 300 ,
             y: 30 ,
         }).to(".seconCard",{
-            
+            scrollTrigger:{
+               
+                trigger: '.secondSectionAnimate' ,
+                scrub: 1 ,
+                toggleActions: "restart none none none " ,
+                start: "425px center " ,
+                end: "+=50px" ,
+            } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
             duration: 700 ,
@@ -196,7 +204,13 @@ export default function Hero(){
             y: -30 ,
             duration: 700 ,
         },{
-           
+            scrollTrigger:{
+               
+                trigger: '.secondSectionAnimate' ,
+                scrub: 1 ,
+                start: "475px center " ,
+                end: "+=120px" ,
+            } ,
             autoAlpha: 1 , 
             opacity: 1  ,
             ease: "power4.out",
@@ -205,6 +219,14 @@ export default function Hero(){
             stagger: 300 ,
             y: 30 ,
         }).to(".thirdCard",{
+            scrollTrigger:{
+               
+                trigger: '.secondSectionAnimate' ,
+                scrub: 1 ,
+                start: "595px center " ,
+                toggleActions: "restart none none none " ,
+                end: "+=50px" ,
+            } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
             duration: 700  ,
@@ -214,7 +236,13 @@ export default function Hero(){
             y: -30 ,
             duration: 700 ,
         },{
-            
+            scrollTrigger:{
+               
+                trigger: '.secondSectionAnimate' ,
+                scrub: 1 ,
+                start: "645px center " ,
+                end: "+=120px" ,
+            } ,
             autoAlpha: 1, 
             opacity: 1  ,
             ease: "power4.out",
@@ -223,6 +251,14 @@ export default function Hero(){
             stagger: 300 ,
             y: 30 ,
         }).to(".fourthCard",{
+            scrollTrigger:{
+               
+                trigger: '.secondSectionAnimate' ,
+                toggleActions: "restart none none none " ,
+                scrub: 1 ,
+                start: "765px center " ,
+                end: "+=50px" ,
+            } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
             duration: 700  ,
@@ -231,12 +267,11 @@ export default function Hero(){
             autoAlpha: 1 ,
         },{
             scrollTrigger:{
-                markers: true ,
-                trigger: '.hideSecond' ,
-                start: "7810px center " ,
-                end: "+=100px" ,
-                scrub: 4 ,
-                pinSpacing: true ,
+               
+                trigger: '.secondSectionAnimate' ,
+                scrub: 1 ,
+                start: "920px center " ,
+                end: "+=120px" ,
             } ,
             duration: 2500 ,
             y: -1400 ,
@@ -245,13 +280,7 @@ export default function Hero(){
         }).fromTo(".sectionn",{
             autoAlpha: 0 ,
         },{
-            scrollTrigger:{
-                markers: true ,
-                trigger: '.secondSectionAnimate' ,
-                scrub: 1 ,
-                start: "260px center " ,
-                end: "+=80px" ,
-            } ,
+            
             duration: 2500 ,
             y: -1000 ,
             ease: "power4.out" ,
