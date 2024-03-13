@@ -125,7 +125,7 @@ export default function Hero(){
             autoAlpha: 0 ,
         },{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.animateButton' ,
                 scrub: 4 ,
                 start: "140px center " ,
@@ -142,7 +142,7 @@ export default function Hero(){
             y: -30 ,
         },{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.firstCard' ,
                 scrub: 1 ,
                 start: "120px center " ,
@@ -156,17 +156,17 @@ export default function Hero(){
             y: 30 ,
         }).to(".firstCard",{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.firstCard' ,
                 scrub: 1 ,
                 toggleActions: "restart none none none " ,
-                start: "240px center " ,
-                end: "+=50px" ,
+                start: "310px center " ,
+                end: "+=120px" ,
             } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
-            duration: 700  ,
-            y: -30 ,
+            duration: 700 ,
+            y: -80 ,
             ease: "power4.out",
         }).fromTo(".seconCard",{
             opacity: 0 ,
@@ -174,7 +174,7 @@ export default function Hero(){
             
         },{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
                 start: "305px center " ,
@@ -188,15 +188,16 @@ export default function Hero(){
             y: 30 ,
         }).to(".seconCard",{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
                 toggleActions: "restart none none none " ,
-                start: "425px center " ,
-                end: "+=50px" ,
+                start: "515px center " ,
+                end: "+=120px" ,
             } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
+            y: -80 ,
             duration: 700 ,
             ease: "power4.out",
         }).fromTo(".thirdCard",{
@@ -205,10 +206,10 @@ export default function Hero(){
             duration: 700 ,
         },{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
-                start: "475px center " ,
+                start: "505px center " ,
                 end: "+=120px" ,
             } ,
             autoAlpha: 1 , 
@@ -220,15 +221,16 @@ export default function Hero(){
             y: 30 ,
         }).to(".thirdCard",{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
-                start: "595px center " ,
+                start: "715px center " ,
                 toggleActions: "restart none none none " ,
-                end: "+=50px" ,
+                end: "+=120px" ,
             } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
+            y: -80 ,
             duration: 700  ,
             ease: "power4.out",
         }).fromTo(".fourthCard",{
@@ -237,10 +239,10 @@ export default function Hero(){
             duration: 700 ,
         },{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
-                start: "645px center " ,
+                start: "705px center " ,
                 end: "+=120px" ,
             } ,
             autoAlpha: 1, 
@@ -252,25 +254,26 @@ export default function Hero(){
             y: 30 ,
         }).to(".fourthCard",{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.secondSectionAnimate' ,
                 toggleActions: "restart none none none " ,
                 scrub: 1 ,
-                start: "765px center " ,
-                end: "+=50px" ,
+                start: "915px center " ,
+                end: "+=120px" ,
             } ,
             boxShadow: "0px 0px 0px 0px rgba(112,168,233,0.05)" ,
             autoAlpha: 0 ,
+            y: -80 ,
             duration: 700  ,
             ease: "power4.out",
         }).fromTo(".hideSecond",{    
             autoAlpha: 1 ,
         },{
             scrollTrigger:{
-               
+                markers: true ,
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
-                start: "920px center " ,
+                start: "990px center " ,
                 end: "+=120px" ,
             } ,
             duration: 2500 ,
