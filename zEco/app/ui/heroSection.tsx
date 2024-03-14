@@ -170,8 +170,7 @@ export default function Hero(){
             ease: "power4.out",
         }).fromTo(".seconCard",{
             opacity: 0 ,
-            y: -30 ,
-            
+            y: -30 ,       
         },{
             scrollTrigger:{
                 markers: true ,
@@ -266,7 +265,7 @@ export default function Hero(){
             y: -30 ,
             duration: 700  ,
             ease: "power4.out",
-        }).fromTo(".firstCard , .seconCard , .thirdCard , .fourthCard",{
+        }).fromTo(".fourthCard ,.firstCard , .seconCard , .thirdCard ",{
             opacity: 0 ,
             duration: 700 ,
             y: 30 ,
@@ -289,12 +288,12 @@ export default function Hero(){
             scrollTrigger:{
                 markers: true ,
                 trigger: '.secondSectionAnimate' ,
-                scrub: 1 ,
+                scrub: 2 ,
                 start: "1190px center " ,
-                end: "+=120px" ,
+                end: "+=80px" ,
             } ,
             duration: 700 ,
-            y: -1400 ,
+            y: -1900 ,
             ease: "power4.out" ,
             autoAlpha: 0 ,
         }).fromTo(".sectionn",{
@@ -308,9 +307,34 @@ export default function Hero(){
                 end: "+=180px" ,
             } ,
             duration: 2,    
-            y: -1550 ,
+            y: -1450 ,
             ease: "power4.out" ,
             autoAlpha: 1 ,
+        }).to(".hideSectionn",{
+            scrollTrigger:{
+                markers: true ,
+                trigger: ".secondSectionAnimate",
+                scrub: 1 ,
+                start: "1435px center",
+                end:"+=100px",
+            } ,
+            duration: 2 ,
+            y: -3800 , 
+            ease: "power4" ,
+            autoAlpha: 0 ,
+        }).fromTo(".registeCard",{
+            autoAlpha: 0 ,
+        },{
+            scrollTrigger:{
+                markers: true ,
+                trigger: ".secondSectionAnimate",
+                scrub: 1 ,
+                start: "1535px center",
+                end:"+=100px",
+            },
+            duration: 2 ,
+            y:-3000,
+        
         })
         
 
@@ -471,7 +495,7 @@ export default function Hero(){
                   </div>
                 </div>
             </div>
-            <div className="sectionn mb-20 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden">
+            <div className="sectionn hideSectionn mb-20 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden">
               <div className="p-20 flex-1 flex flex-col max-w-[880px] gap-6 items-start ">
                 <div className="text-start flex flex-col gap-3 ">
                     <div className="bg-clip-text py-2 text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 font-bold text-6xl">6 Months free of Zero Premium</div>
@@ -488,30 +512,30 @@ export default function Hero(){
                     <Link href={"/"} className="px-20 py-4 bg-blue-600 text-slate-50 font-normal text-base text-center rounded-2xl">Get 6 months for free</Link>
                 </div>  
               </div>
-              <div className="max-w-[563px] w-full h-[400px] flex flex-col gap-8 bg-bottom bg-cover pl-[72px] py-[120px] " style={{ backgroundImage: 'url(bg.svg)' }}>
-                <div className="flex items-center gap-2">
+              <div className="max-w-[563px] w-full h-[400px] flex flex-col gap-8 bg-bottom bg-cover pl-[72px] py-[120px] relative " style={{ backgroundImage: 'url(bg.svg)' }}>
+                <div className="flex items-center gap-2 textsForCard">
                     <Image src="check.svg" alt={"checkSvg"} width={24} height={24} />
                     <div className="font-semibold text-lg tracking-tight ">Manual budget input</div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 textsForCard">
                     <Image src="check.svg" alt={"checkSvg"} width={24} height={24} />
                     <div className="font-semibold text-lg tracking-tight ">Wallet features</div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 textsForCard">
                     <Image src="check.svg" alt={"checkSvg"} width={24} height={24} />
                     <div className="font-semibold text-lg tracking-tight ">Automatic expenses tracking </div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 textsForCard">
                     <Image src="check.svg" alt={"checkSvg"} width={24} height={24} />
                     <div className="font-semibold text-lg tracking-tight ">Full Plaid features</div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 textsForCard">
                     <Image src="check.svg" alt={"checkSvg"} width={24} height={24} />
                     <div className="font-semibold text-lg tracking-tight ">Limited paid features</div>
                 </div>
               </div>
             </div>
-            <div className="h-[800px] rounded-2xl flex py-20  flex-col gap-8 bg-center bg-cover items-center  border-l-2  border-r-2 border-t-[1.5px] border-t-cyan-700 border-r-cyan-700/25 border-l-cyan-700/25  " style={{ backgroundImage: 'url(bg.svg)' }}>
+            <div className="registeCard h-[800px] rounded-2xl flex py-20  flex-col gap-8 bg-center bg-cover items-center  border-l-2  border-r-2 border-t-[1.5px] border-t-cyan-700 border-r-cyan-700/25 border-l-cyan-700/25  " style={{ backgroundImage: 'url(bg.svg)' }}>
                 <div className="flex flex-col gap-4 ">
                     <div className="text-6xl tracking-tight font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 ">Sign up and get<br></br>6 months Premium</div>
                     <div className=" text-center font-medium text-gray-400  ">Ready to get started?</div>
