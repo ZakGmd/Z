@@ -7,7 +7,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
+
 
 export default function Hero(){
     const idk = `  bg-clip-text py-2 text-transparent bg-gradient-to-r from-slate-50 to-slate-600 font-bold text-7xl  ` ;
@@ -125,7 +127,7 @@ export default function Hero(){
             autoAlpha: 0 ,
         },{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.animateButton' ,
                 scrub: 4 ,
                 start: "140px center " ,
@@ -142,7 +144,7 @@ export default function Hero(){
             y: -30 ,
         },{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.firstCard' ,
                 scrub: 1 ,
                 start: "120px center " ,
@@ -156,7 +158,7 @@ export default function Hero(){
             y: 30 ,
         }).to(".firstCard",{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.firstCard' ,
                 scrub: 1 ,
                 toggleActions: "restart none none none " ,
@@ -173,7 +175,7 @@ export default function Hero(){
             y: -30 ,       
         },{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
                 start: "305px center " ,
@@ -187,7 +189,7 @@ export default function Hero(){
             y: 30 ,
         }).to(".seconCard",{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
                 toggleActions: "restart none none none " ,
@@ -202,10 +204,10 @@ export default function Hero(){
         }).fromTo(".thirdCard",{
             opacity: 0 ,
             y: -30 ,
-            duration: 700 ,
+          
         },{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
                 start: "505px center " ,
@@ -220,7 +222,7 @@ export default function Hero(){
             y: 30 ,
         }).to(".thirdCard",{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
                 start: "715px center " ,
@@ -238,7 +240,7 @@ export default function Hero(){
             duration: 700 ,
         },{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
                 start: "705px center " ,
@@ -253,7 +255,7 @@ export default function Hero(){
             y: 30 ,
         }).to(".fourthCard",{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.secondSectionAnimate' ,
                 toggleActions: "restart none none none " ,
                 scrub: 1 ,
@@ -267,11 +269,10 @@ export default function Hero(){
             ease: "power4.out",
         }).fromTo(".fourthCard ,.firstCard , .seconCard , .thirdCard ",{
             opacity: 0 ,
-            duration: 700 ,
-            y: 30 ,
+            
         },{
             scrollTrigger:{
-                markers: true ,
+                
                 trigger: '.secondSectionAnimate' ,
                 toggleActions: "restart none none none " ,
                 scrub: 1 ,
@@ -279,8 +280,6 @@ export default function Hero(){
                 end: "+=120px" ,
             } ,
             autoAlpha: 1,
-          
-            duration: 700  ,
             ease: "power4.out",
         }).fromTo(".hideSecond",{    
             autoAlpha: 1 ,
@@ -292,35 +291,37 @@ export default function Hero(){
                 start: "1190px center " ,
                 end: "+=80px" ,
             } ,
-            duration: 700 ,
+            duration: 3 ,
             y: -1900 ,
             ease: "power4.out" ,
             autoAlpha: 0 ,
-        }).fromTo(".sectionn",{
+        }).fromTo(".sectionn" ,{
             autoAlpha: 0 ,
         },{
             scrollTrigger:{
                 markers: true ,
                 trigger: '.secondSectionAnimate' ,
                 scrub: 1 ,
-                start: "1195px center " ,
-                end: "+=180px" ,
+                start: "1175px center " ,
+                end: "+=120px" ,
             } ,
             duration: 2,    
-            y: -1450 ,
+            y: -1550 ,
             ease: "power4.out" ,
             autoAlpha: 1 ,
-        }).to(".hideSectionn",{
+        }).fromTo(".hideIt",{
+            autoAlpha: 1 ,
+        },{
             scrollTrigger:{
                 markers: true ,
                 trigger: ".secondSectionAnimate",
-                scrub: 1 ,
+                scrub: 1,
                 start: "1435px center",
-                end:"+=100px",
+                end:"+=50px",
             } ,
-            duration: 2 ,
-            y: -3800 , 
-            ease: "power4" ,
+            duration: 3 ,
+            y: -1900 , 
+            ease: "power1.out" ,
             autoAlpha: 0 ,
         }).fromTo(".registeCard",{
             autoAlpha: 0 ,
@@ -329,11 +330,12 @@ export default function Hero(){
                 markers: true ,
                 trigger: ".secondSectionAnimate",
                 scrub: 1 ,
-                start: "1535px center",
-                end:"+=100px",
+                start: "1445px center",
+                end:"+=70px",
             },
             duration: 2 ,
-            y:-3000,
+            y:-2130,
+            autoAlpha: 1 ,
         
         })
         
@@ -342,7 +344,7 @@ export default function Hero(){
 
     return(
         <>
-        <div className="my-auto max-w-[1443px] mx-auto flex flex-col mb-20 overflow overflow-hidden " ref={container}   >
+        <div className="my-auto max-w-[1443px] max-h-[890px] mx-auto flex flex-col mb-20 overflow overflow-hidden " ref={container}   >
             <div className="relative mt-[180px] mb-[370px]" >
                <div className="animateLines line absolute w-[1px] left-[340px] top-[-100px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
             <div className="animateLines line absolute w-[1px] right-[360px] top-[-100px] h-[182px] bg-gradient-to-b from-transparent to-slate-700"></div>
@@ -495,7 +497,7 @@ export default function Hero(){
                   </div>
                 </div>
             </div>
-            <div className="sectionn hideSectionn mb-20 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10  overflow-hidden">
+            <div className="sectionn hideIt mb-20 flex items-start bg-gradient-to-b from-slate-950 from-8% to-black rounded-2xl border-l-[1.8px] border-t-2 border-t-white/10 border-l-white/10   ">
               <div className="p-20 flex-1 flex flex-col max-w-[880px] gap-6 items-start ">
                 <div className="text-start flex flex-col gap-3 ">
                     <div className="bg-clip-text py-2 text-transparent bg-gradient-to-b from-slate-50 from-1% to-slate-400 font-bold text-6xl">6 Months free of Zero Premium</div>
